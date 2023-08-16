@@ -1,6 +1,6 @@
-# API Alchemy: Turning Data into Gold
+# API Alchemy: Turning Data into Gold ✨🏆
 
-## Session 1: Introduction to APIs and API Basics (2 hours)
+## Session 1: Introduction to APIs and API Basics (2 hours) 👨‍🏫
 _Overview: Gain an understanding of APIs and their role in modern software development, along with exploring the fundamental concepts of REST and SOAP methods._
 
 1. What are APIs?
@@ -23,7 +23,7 @@ _Overview: Gain an understanding of APIs and their role in modern software devel
     * Using tools like Postman to send RESTful API requests.
     * Interacting with a simple RESTful API to retrieve and manipulate data.
 
-## Session 2: Working with API Data and API Documentation (2 hours)
+## Session 2: Working with API Data and API Documentation (2 hours) 📜
 _Overview: Delve deeper into handling and manipulating data obtained from APIs, understanding different data formats, and exploring how to use and read API documentation effectively._
 
 1. API Data Formats and Handling Responses
@@ -42,7 +42,7 @@ _Overview: Delve deeper into handling and manipulating data obtained from APIs, 
     * Continue using tools like Postman to send RESTful API requests.
     * Finding data via API calls from popular platforms like Twitter, Translate, Google Maps, YouTube, and more!
   
-## Session 3: Using Python for API Calls and Data Manipulation (2 hours)
+## Session 3: Using Python for API Calls and Data Manipulation (2 hours) 🐍
 _Overview: Explore using Python to make API calls and manipulate JSON data using dictionaries and Pandas DataFrames._
 
 1. Python for API Calls
@@ -57,7 +57,7 @@ _Overview: Explore using Python to make API calls and manipulate JSON data using
 3. Hands-On: Python API Integration and Data Analysis
     * Participants work on a project that involves making API calls, parsing JSON data, and performing data analysis using Pandas.
 
-## Session 4: Practical Implementation with Procore Data (2 hours)
+## Session 4: Practical Implementation with Procore Data (2 hours) 🔨
 _Overview: Learn to access data from Procore using APIs, focusing on real-world application scenarios._
 
 1. Procore API Overview
