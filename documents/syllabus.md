@@ -15,9 +15,10 @@ _Overview: Gain an understanding of APIs and their role in modern software devel
     * Introduction to RESTful and SOAP APIs.
     * Comparing REST and SOAP in terms of principles and use cases.
 
-4. RESTful API Concepts
-    * Understanding HTTP methods: GET, POST, PUT, DELETE.
-    * Exploring RESTful API endpoints, requests, and responses.
+4. HTTP
+    * Four components of HTTP structure: Start Line, Headers, Blank Line, and Body.
+    * Understanding HTTP methods: GET, POST, PUT/PATCH, DELETE.
+    * Requests, responses, and status codes.
 
 5. Hands-On: Making API Requests
     * Using tools like Postman to send RESTful API requests.
