@@ -10,13 +10,14 @@ _Gain an understanding of APIs and their role in modern software development, al
 * Exploring the benefits of API utilization for data integration and software development.
 * Case studies highlighting successful API implementations.
 
-## API Basics: REST and SOAP (10 minutes)
+## API Basics: REST and SOAP (5 minutes)
 * Introduction to two common API architectural styles: REST and SOAP.
 * Comparing REST and SOAP in terms of principles and use cases.
 
-## RESTful API Concepts and HTTP Methods (15 minutes)
-* Understanding HTTP methods: GET, POST, PUT, DELETE.
-* Exploring RESTful API endpoints, requests, and responses.
+## HTTP (20 minutes)
+* Four components of HTTP structure: Start Line, Headers, Blank Line, and Body.
+* Understanding HTTP methods: GET, POST, PUT/PATCH, DELETE.
+* Requests, responses, and status codes.
 
 ## Break (10 minutes)
 
