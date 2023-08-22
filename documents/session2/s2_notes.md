@@ -1,6 +1,8 @@
 Session 2: Working with API Data and API Documentation 📜
 _Delve deeper into handling and manipulating data obtained from APIs, understanding different data formats, and exploring how to use and read API documentation effectively._
 
+📹 [Link to Presentation](https://www.beautiful.ai/player/-NcT8oMgP1-HCOsKJEM0)
+
 ## Subsection 1: [Session 1 Review](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#session-1-review-10-minutes)
 
 ### Slide 1: Title
@@ -198,6 +200,87 @@ This class of status code is intended for situations in which the error seems to
 
 #### 500s - Server-side Error
 Response status codes beginning with the digit "5" indicate cases in which the server is aware that it has encountered an error or is otherwise incapable of performing the request.
+
+## Subsection 2: [API Data Formats and Handling Responses](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#api-data-formats-and-handling-responses-10-minutes)
+
+### Slide 13: XML
+_What is XML and what are some key characteristics_
+
+XML (eXtensible Markup Language) is a widely used format for structuring and representing data that needs to be exchanged between different software systems. XML is not limited to APIs; it's also used for data storage, configuration files, and more.
+* **Definition**: XML is a markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable.
+* **Purpose**: XML is used to structure and represent data in a hierarchical and standardized way, making it easier for different software applications to understand and process the data.
+
+#### XML in API Context:
+* **Data Exchange**: APIs often use XML as a format for exchanging data between a client (requester) and a server (provider).
+* **Data Representation**: XML allows you to represent structured data with elements, attributes, and values, making it suitable for various types of information like configuration settings, lists, documents, and more.
+* **Data Types**: XML supports a wide range of data types, including strings, numbers, dates, and more complex structures.
+* **Flexibility**: XML is extensible, meaning you can define custom tags and structures to represent specific data formats or schemas.
+* **Human-Readable**: XML documents are designed to be both human-readable and machine-readable. This readability helps developers understand the structure and content of the data being exchanged.
+
+#### XML Structure:
+* **Tags**: XML documents use tags to define elements that hold data. Tags are enclosed in angle brackets, like `<tag>`.
+* **Attributes**: Elements can have attributes that provide additional information. Attributes are defined within the opening tag, like `<element attribute="value">`.
+* **Hierarchy**: XML documents have a hierarchical structure, with elements nested within other elements to create a tree-like arrangement.
+* **Closing Tags**: Each opening tag must have a corresponding closing tag (e.g., `<tag>data</tag>`).
+
+### Slide 14: XML Example
+
+```xml
+<bookstore>
+    <book category="Fiction">
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <price>10.99</price>
+    </book>
+    <book category="Non-Fiction">
+        <title>Sapiens</title>
+        <author>Yuval Noah Harari</author>
+        <price>15.95</price>
+    </book>
+</bookstore>
+```
+
+### Slide 15: JSON Data
+_What is JSON and what are some key characteristics_
+
+JSON (JavaScript Object Notation) is:
+* **Definition**: a lightweight data interchange format that is easy for both humans and machines to read and write.
+* **Purpose**: used to structure and represent data in a format that is efficient for data exchange between different software systems.
+
+#### JSON in API Context
+* **Data Exchange**: APIs often use JSON as a format for exchanging structured data between clients and servers.
+* **Data Representation**: JSON represents data as key-value pairs, arrays, and nested objects, making it suitable for various types of information.
+* **Data Types**: JSON supports basic data types such as strings, numbers, booleans, arrays, and objects.
+* **Simplicity**: JSON's syntax is less verbose than XML, which contributes to its simplicity and ease of use.
+
+#### JSON Structure
+* **Objects**: JSON data is organized into objects, which consist of key-value pairs enclosed in curly braces ({}).
+* **Arrays**: Arrays in JSON are ordered lists of values enclosed in square brackets ([]).
+* **Values**: Values can be strings, numbers, booleans, objects, arrays, or null.
+* **Keys**: Keys are strings that represent the names of values within objects.
+
+### Slide 16: JSON Example
+
+```json
+{
+    "bookstore": {
+        "books": [
+            {
+                "category": "Fiction",
+                "title": "The Great Gatsby",
+                "author": "F. Scott Fitzgerald",
+                "price": 10.99
+            },
+            {
+                "category": "Non-Fiction",
+                "title": "Sapiens",
+                "author": "Yuval Noah Harari",
+                "price": 15.95
+            }
+        ]
+    }
+}
+```
    
 ## Break (10 minutes)
 
