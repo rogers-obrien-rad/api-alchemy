@@ -1,4 +1,4 @@
-Session 2: Working with API Data and API Documentation 📜
+# Session 2: Working with API Data and API Documentation 📜
 _Delve deeper into handling and manipulating data obtained from APIs, understanding different data formats, and exploring how to use and read API documentation effectively._
 
 📹 [Link to Presentation](https://www.beautiful.ai/player/-NcT8oMgP1-HCOsKJEM0)
@@ -281,6 +281,8 @@ JSON (JavaScript Object Notation) is:
     }
 }
 ```
+
+### Slide 16: 
    
 ## Break (10 minutes)
 
