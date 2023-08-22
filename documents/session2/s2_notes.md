@@ -282,7 +282,67 @@ JSON (JavaScript Object Notation) is:
 }
 ```
 
-### Slide 16: 
+### Slide 17: Authentication versus Authorization
+_Differences between the widely interchanged words_
+
+#### Authentication
+Authentication is the process of verifying the identity of a user, system, or entity. It ensures that the person or entity claiming access to a system or resource is indeed who they say they are. Authentication is the first step in the security process and is typically based on providing credentials such as a username and password, a security token, a fingerprint, or other forms of identity verification. Once authenticated, a user gains access to a system or application.
+
+#### Authorization
+Authorization, on the other hand, comes after authentication and involves granting or denying access to specific resources or actions based on the authenticated user's permissions. In essence, authorization determines what actions a user or entity is allowed to perform within a system or application. Authorization is typically defined by roles, permissions, or access levels that are associated with the authenticated user. It ensures that users only have access to the functionalities and data they are entitled to based on their roles or privileges.
+
+#### TL;DR
+* **Authentication** is about confirming the identity of a user.
+* **Authorization** is about granting or denying access to specific resources or actions based on the user's verified identity and permissions
+
+### Slide 18: Common Authentication Methods
+
+#### API Keys
+* API keys are simple and widely used for authentication.
+* They are unique alphanumeric strings issued to clients (applications or users) by the API provider.
+* Clients include the API key in the request headers or query parameters to authenticate themselves.
+* API keys are suitable for public APIs with lower security requirements.
+
+#### Bearer Token Authentication (Token-based)
+* Bearer token authentication is used with tokens like JWT (JSON Web Token) or OAuth 2.0 access tokens.
+* After successful authentication, clients receive an access token, which they include in the request headers.
+* The server validates the token to authorize the client's access to resources.
+* Bearer token authentication provides flexibility and scalability.
+
+#### Basic Authentication
+* Basic Authentication involves sending a username and password in the request headers.
+* The credentials are typically base64-encoded (but not encrypted), making it important to use HTTPS for secure transmission.
+* While simple to implement, Basic Authentication is less secure due to the risk of credentials being intercepted.
+
+### Slide 19: Basic Authentication
+_Standard username and password_
+
+A developer accessing a private GitHub repository using the Git command-line tool. The tool prompts for a username and password, which the developer provides. The credentials are then base64-encoded and included in the Git request headers for authentication.
+
+```bash
+git clone https://github.com/username/repo.git
+Username: your_username
+Password: your_password
+```
+
+### Slide 20: API Keys
+_Keys provided in header or query parameters_
+
+Using a weather API to fetch weather information for your application. The API provider gives you a unique API key. To authenticate, you include the API key in the request URL when making API calls.
+
+```http
+GET https://api.weather.com/forecast?api_key=your_api_key
+```
+
+### Slide 21: Token-based
+_Similar to keys but token expires_
+
+A mobile app that interacts with a user's social media account. After the user logs in, the app receives a JWT (JSON Web Token). When making requests to the social media API, the app includes the JWT in the request headers.
+
+```http
+GET https://api.socialmedia.com/posts
+Authorization: Bearer your_jwt
+```
    
 ## Break (10 minutes)
 
