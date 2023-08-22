@@ -1,6 +1,11 @@
 # Session 2: Working with API Data and API Documentation 📜
 _Overview: Delve deeper into handling and manipulating data obtained from APIs, understanding different data formats, and exploring how to use and read API documentation effectively._
 
+## Session 1 Review (10 minutes)
+* What are APIs?
+* API architecture: REST and SOAP
+* HTTP and formatting requests
+
 ## API Data Formats and Handling Responses (10 minutes)
 * Introduction to XML
 * Introduction to JSON
