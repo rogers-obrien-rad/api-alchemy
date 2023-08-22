@@ -11,7 +11,8 @@ _Overview: Delve deeper into handling and manipulating data obtained from APIs, 
 * Introduction to JSON
 * Parsing API response data and extracting meaningful information
 
-## Authentication and Security (20 minutes)
+## API Access and Security (20 minutes)
+* Authentication versus Authorization
 * Exploring API authentication methods: API keys, tokens, OAuth.
 * Implementing secure API requests and safeguarding sensitive data.
 
@@ -24,4 +25,3 @@ _Overview: Delve deeper into handling and manipulating data obtained from APIs, 
 ## Hands-On: Making more API Requests (60 minutes)
 * Continue using tools like Postman to send RESTful API requests.
 * Finding data via API calls from popular platforms like Twitter, Translate, Google Maps, YouTube, and more!
-  
