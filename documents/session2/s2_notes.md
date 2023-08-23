@@ -282,6 +282,8 @@ JSON (JavaScript Object Notation) is:
 }
 ```
 
+## Subsection 3: [API Access and Security](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#api-access-and-security-20-minutes)
+
 ### Slide 17: Authentication versus Authorization
 _Differences between the widely interchanged words_
 
@@ -342,6 +344,83 @@ A mobile app that interacts with a user's social media account. After the user l
 ```http
 GET https://api.socialmedia.com/posts
 Authorization: Bearer your_jwt
+```
+
+## Subsection 4: [API Documentation](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#api-documentation-and-how-to-useread-it-10-minutes)
+
+### Slide 22: Navigating Docs
+_A guidebook to the API's capabilities and usage_
+
+Key components of API documentation include:
+* **Endpoints**: These are URLs that define specific functions or resources the API provides.
+* **Parameters**: These are inputs required to customize your API requests, such as query parameters, headers, or request bodies.
+* **Responses**: Documentation explains what data the API returns in response to different requests.
+* **Authentication**: Details about how to authenticate and authorize your requests using API keys, tokens, or other methods.
+
+Some examples:
+* [Procore API Docs](https://developers.procore.com/reference/rest/v1/docs/rest-api-overview)
+* [OpenWeatherMap API Docs](https://openweathermap.org/current#concept)
+* [NASA API Docs](https://ssd-api.jpl.nasa.gov/doc/index.php)
+
+### Slide 23: Endpoints
+_More details on endpoints_
+* **Definition**: Endpoints are specific URLs that represent different functions or resources within an API. Each endpoint corresponds to a particular action or retrieval of data.
+* **Purpose**: Endpoints act as the entry points for clients (applications or users) to interact with an API. They provide a structured way to access specific functionalities offered by the API.
+* **Usage**: Clients use different HTTP methods (GET, POST, PUT, DELETE, etc.) on specific endpoints to perform actions like retrieving data, creating new records, updating existing records, or deleting data.
+
+#### GET Endpoint for Retrieving User Information:
+* **Endpoint**: /api/users/{user_id}
+* **Description**: This endpoint is used to retrieve information about a specific user identified by their user_id.
+* **HTTP Method**: GET
+** Example Request**:
+```http
+GET /api/users/123
+```
+
+#### POST Endpoint for Creating a New Post:
+* **Endpoint**: /api/posts
+* **Description**: This endpoint allows clients to create a new post.
+* **HTTP Method**: POST
+* **Example Request**:
+```http
+POST /api/posts
+{
+  "title": "New Post Title",
+  "content": "This is the content of the new post."
+}
+```
+
+### Slide 24: Parameters
+_The three types of parematers and what their usage is_
+
+#### Header Parameters
+* **Purpose**: Header parameters contain additional information about the request or the client making the request.
+* **Usage**: Header parameters are included in the headers section of the HTTP request. They provide context or instructions for the server to process the request properly. Examples include authentication tokens, user agents, and content types (e.g., JSON or XML).
+
+#### Path Parameters
+* **Purpose**: Path parameters allow dynamic segments in the URL path to identify specific resources or actions.
+* **Usage**: Path parameters are inserted directly into the URL path and enclosed within curly braces. They are used to specify identifiers, such as IDs or slugs, that help the server determine which resource the client is requesting. For instance, in a URL like `/users/{user_id}`, `user_id` is a path parameter.
+
+#### Query Parameters
+* **Purpose**: Query parameters enable customization and filtering of API requests by providing additional information to the server.
+* **Usage**: Query parameters are appended to the URL after a question mark (?). They are in the form of key-value pairs, separated by &. Query parameters help modify the behavior of the request, such as specifying search terms, filters, sorting options, or pagination limits. For example, in a URL like `/products?category=electronics&sort=price`, `category` and `sort` are query parameters.
+
+### Slide 25: Parameters Example
+_Highlighting how parameters are used when making an HTTP request_
+
+```http
+POST /rest/v1.0/projects/681425/rfis?run_configurable_validations=False HTTP/1.1
+Host: api.procore.com
+Authorization: Bearer REPLACE_BEARER_TOKEN
+Procore-Company-Id: 8089
+Content-Type: application/json
+
+{
+  "rfi": {
+    "subject": "Wall Color",
+    "reference": "Color of the kitchen wall"
+  }
+}
 ```
    
 ## Break (10 minutes)
