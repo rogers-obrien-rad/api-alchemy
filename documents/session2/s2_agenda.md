@@ -14,7 +14,6 @@ _Overview: Delve deeper into handling and manipulating data obtained from APIs, 
 ## API Access and Security (20 minutes)
 * Authentication versus Authorization
 * Exploring API authentication methods: API keys, tokens, OAuth.
-* Implementing secure API requests and safeguarding sensitive data.
 
 ## API Documentation and How to Use/Read It (10 minutes)
 * Importance of clear and comprehensive API documentation.
