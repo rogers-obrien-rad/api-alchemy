@@ -22,8 +22,7 @@ _Gain an understanding of APIs and their role in modern software development, al
 ## Break (10 minutes)
 
 ## Hands-On: Making API Requests (45 minutes)
-* Introduction to API testing tools like Postman for sending API requests.
-* Step-by-step walkthrough of making a GET request to a mock RESTful API endpoint.
+* Introduction to API testing through [Postman](https://www.postman.com/) for sending API requests.
+* Step-by-step walkthrough of making a GET, POST, and DELETE requests to mock RESTful API endpoints.
 * Retrieving data from the API response, understanding JSON format, and showcasing it in the tool's interface.
 * **Interactive Exercise**: Participants make their own GET request using Postman to retrieve specific data from a sample API.
-This revised schedule allows for a 10-minute break after the first three sections, ensuring participants have a chance to recharge before diving into the hands-on activity.
