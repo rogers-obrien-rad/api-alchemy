@@ -371,3 +371,19 @@ Identify the key components:
 ## Break (10 minutes)
 
 ## Subsection 5: [Hands-On: Making API Requests](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session1/s1_agenda.md#hands-on-making-api-requests-45-minutes)
+
+### Slide 23: Hands-On Agenda
+During the Hands-On session, we will be:
+1. Creating a Postman Account
+2. Getting an Overview of the Postman Platform
+3. Making API Requests!
+
+### Slide 24: Creating Postman Account
+Use the links below to find more information:
+* For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=99221a09-3806-4a0b-b0a2-9e30567f67a4)
+* For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/creating_postman_account.md)
+
+#### Slide 25: Workspaces and Concepts
+Use the links below to find more information:
+* For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=c0aa636f-1ff2-476b-997a-6eda96effd20)
+* For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/workspaces_and_concepts.md)
