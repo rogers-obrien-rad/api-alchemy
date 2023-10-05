@@ -383,32 +383,32 @@ Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=99221a09-3806-4a0b-b0a2-9e30567f67a4)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/1_creating_postman_account.md)
 
-#### Slide 25: Workspaces and Concepts
+### Slide 25: Workspaces and Concepts
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=c0aa636f-1ff2-476b-997a-6eda96effd20)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/2_workspaces_and_concepts.md)
 
-#### Slide 26: Collections
+### Slide 26: Collections
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=4a19a091-0f81-4909-a2f8-11fbde1dbceb)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/3_collections.md)
 
-#### Slide 27: GET Requests
+### Slide 27: GET Requests
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=17d7e709-65a7-42fd-88f1-9d891d0bb6fd)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/4_get_requests.md)
 
-#### Slide 28: POST request
+### Slide 28: POST request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=d6cb12f6-b44e-4ad2-9590-5529789cda40)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/5_post_requests.md)
 
-#### Slide 29: PATCH request
+### Slide 29: PATCH request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=40648793-de3e-494b-8fa6-061aa404b28b)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/6_patch_requests.md)
 
-#### Slide 30: DELETE request
+### Slide 30: DELETE request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=a4f21920-a467-4844-b4b6-0a179134ce0e)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/7_delete_requests.md)
