@@ -23,4 +23,4 @@ _Overview: Delve deeper into handling and manipulating data obtained from APIs, 
 
 ## Hands-On: Making more API Requests (60 minutes)
 * Continue using tools like Postman to send RESTful API requests.
-* Finding data via API calls from popular platforms like Twitter, Translate, Google Maps, YouTube, and more!
+* Accessing Procore data via the API
