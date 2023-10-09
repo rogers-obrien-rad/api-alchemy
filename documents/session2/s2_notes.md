@@ -408,7 +408,7 @@ _The three types of parematers and what their usage is_
 ### Slide 25: Parameters Example
 _How parameters are documented_
 
-Documentation for Path Parameters typically includes:
+#### Documentation for Path Parameters typically includes:
 1. **Parameter Names**: Documentation lists the names of path parameters that you may need to include in your API request's URL. These parameters are typically part of the URL structure.
 2. **Parameter Types**: It specifies the data types or formats expected for each path parameter. This information helps you ensure that your parameter values match the expected type.
 3. **Parameter Placement**: Path parameters are typically included directly in the URL's path, and the documentation shows where in the URL to place each parameter.
@@ -417,10 +417,16 @@ Documentation for Path Parameters typically includes:
 1. **Example URLs**: Documentation often provides examples of complete URLs with path parameters included. These examples serve as templates for constructing your requests.
 1. **Parameter Descriptions**: You'll find descriptions or explanations for each path parameter, helping you understand its purpose and usage within the API request.
 
-Documentation for Query Parameters typically includes:
+#### Documentation for Query Parameters typically includes:
+1. **Parameter Names**: Documentation lists the names of query parameters that you may include in your API request's URL. These parameters are typically added after the "?" character in the URL.
+2. **Parameter Types**: It specifies the data types or formats expected for each query parameter, helping you ensure that your parameter values match the expected type.
+2. **Parameter Usage**: Query parameters are typically used to filter, paginate, or customize API responses. Documentation explains how each parameter affects the response.
+2. **Parameter Constraints**: Documentation may outline any constraints or validation rules that query parameters must adhere to, such as valid values or numeric ranges.
+2. **Optional Parameters**: Query parameters are often optional, meaning you can choose whether to include them in the URL. Documentation indicates which parameters are optional and which are required.
+2. **Example URLs**: Documentation provides examples of complete URLs with query parameters included, showing how to structure requests for specific use cases.
+2. **Parameter Descriptions**: You'll find descriptions or explanations for each query parameter, helping you understand its purpose and how it influences the API response.
 
-
-Documentation for Headers typically includes:
+#### Documentation for Headers typically includes:
 1. **Header Names**: Documentation lists the names of the headers that you may need to include in your API request. These names are case-sensitive and should be entered exactly as specified.
 2. **Header Values**: For each header, it specifies the expected or allowed values. Some headers may have specific values that are required or optional.
 3. **Common Headers**: Commonly used headers like "Authorization," "Content-Type," and "User-Agent" are explained in detail because they are widely used in API requests.
