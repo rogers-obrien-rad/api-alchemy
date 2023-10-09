@@ -406,7 +406,41 @@ _The three types of parematers and what their usage is_
 * **Usage**: Query parameters are appended to the URL after a question mark (?). They are in the form of key-value pairs, separated by &. Query parameters help modify the behavior of the request, such as specifying search terms, filters, sorting options, or pagination limits. For example, in a URL like `/products?category=electronics&sort=price`, `category` and `sort` are query parameters.
 
 ### Slide 25: Parameters Example
-_Highlighting how parameters are used when making an HTTP request_
+_How parameters are documented_
+
+Documentation for Path Parameters typically includes:
+1. **Parameter Names**: Documentation lists the names of path parameters that you may need to include in your API request's URL. These parameters are typically part of the URL structure.
+2. **Parameter Types**: It specifies the data types or formats expected for each path parameter. This information helps you ensure that your parameter values match the expected type.
+3. **Parameter Placement**: Path parameters are typically included directly in the URL's path, and the documentation shows where in the URL to place each parameter.
+1. **Parameter Constraints**: Documentation may outline any constraints or validation rules that path parameters must adhere to, such as minimum/maximum lengths or allowed characters.
+1. **Required Parameters**: It specifies whether a path parameter is required or optional. If a parameter is required, it must be included in the URL for the request to be valid.
+1. **Example URLs**: Documentation often provides examples of complete URLs with path parameters included. These examples serve as templates for constructing your requests.
+1. **Parameter Descriptions**: You'll find descriptions or explanations for each path parameter, helping you understand its purpose and usage within the API request.
+
+Documentation for Query Parameters typically includes:
+
+
+Documentation for Headers typically includes:
+1. **Header Names**: Documentation lists the names of the headers that you may need to include in your API request. These names are case-sensitive and should be entered exactly as specified.
+2. **Header Values**: For each header, it specifies the expected or allowed values. Some headers may have specific values that are required or optional.
+3. **Common Headers**: Commonly used headers like "Authorization," "Content-Type," and "User-Agent" are explained in detail because they are widely used in API requests.
+4. **Example Headers**: Documentation often provides examples of header configurations for different scenarios. These examples serve as templates for your requests.
+5. **Header Descriptions**: You'll find descriptions or explanations for each header, clarifying its purpose and how it affects the API request or response.
+6. **Required Headers**: It specifies whether a header is required or optional. If a header is required, it's crucial to include it in your request; otherwise, the request may fail.
+7. **Header Format**: Information about the format or syntax of headers is given. For instance, some headers require a specific format, like date and time in a specific format.
+8. **Authentication Headers**: If the API uses authentication, the documentation provides details about headers required for authentication, such as API keys or tokens.
+9. **Custom Headers**: In some cases, you may need to include custom headers specific to the API. Documentation explains how to use these headers effectively.
+
+Below is the [Procore API Documentation](https://developers.procore.com/reference/rest/v1/rfis?version=1.0#create-rfi) on how to create a RFI using a POST request:
+
+![image](https://github.com/rogers-obrien-rad/api-alchemy/assets/33231914/130a98cc-9722-4dc6-a86c-9614883f6733)
+
+You can see we have:
+* **Header Parameter**: `Procore-Company-Id` which needs to be an integer
+* **Path Parameter**: `project_id` which also needs to be an integer
+* **Query Parameter**: `run_configurable_validations` which is a boolean
+
+The actual request in HTTP might look something like this:
 
 ```http
 POST /rest/v1.0/projects/681425/rfis?run_configurable_validations=False HTTP/1.1
@@ -419,6 +453,40 @@ Content-Type: application/json
   "rfi": {
     "subject": "Wall Color",
     "reference": "Color of the kitchen wall"
+  }
+}
+```
+
+Where:
+* **Header Parameters**: All parameters under the URL such as `Authorization` and `Content-Type`
+* **Path Parameter**: `681425` is placed in the URL
+* **Query Parameter**: `run_configurable_validation` is placed after the question mark "?"
+
+### Slide 26: Request Body
+_How documentation specifies the request body_
+
+API documentation typically displays request body notes by providing detailed information on how to structure and format the data that you need to send in the request body when making an API call. These notes may include:
+1. **Data Format**: Documentation explains the expected data format, which can be JSON, XML, form data, or another format. It specifies how to structure your data.
+2. **Parameters**: It lists the parameters or fields that should be included in the request body. Each parameter is described, including its name, type, and whether it's required.
+3. **Example**: Documentation often provides an example request body, showing you exactly how the data should be structured. This example serves as a template for your requests.
+4. **Data Types**: It clarifies the data types allowed for each parameter (e.g., string, number, boolean) and may specify any constraints or validation rules.
+5. **Validation Rules**: Documentation may detail any specific validation rules or patterns that the data must adhere to, such as minimum/maximum lengths or allowed characters.
+6. **Default Values**: If some parameters have default values, those values are usually documented.
+7. **Notes and Descriptions**: You may find explanations or descriptions of each parameter, helping you understand their purpose and usage.
+
+Below is a screenshot taken from the [Procore API Documentation](https://developers.procore.com/reference/rest/v1/project-folders-and-files?version=1.0#create-project-folder) on how to create a folder in Procore using a POST request:
+![image](https://github.com/rogers-obrien-rad/api-alchemy/assets/33231914/df1ac7d7-1323-4617-9a5b-ff72564ed5ee)
+
+The actual JSON data that you would send in the body would look something like this:
+
+```json
+{
+  "folder": {
+    "parent_id": 12,
+    "name": "test_folder",
+    "is_tracked": true,
+    "explicit_permissions": true,
+    "custom_field_%{custom_field_definition_id}": "string"
   }
 }
 ```
