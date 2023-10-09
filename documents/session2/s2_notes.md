@@ -409,33 +409,31 @@ _The three types of parematers and what their usage is_
 _How parameters are documented_
 
 #### Documentation for Path Parameters typically includes:
-1. **Parameter Names**: Documentation lists the names of path parameters that you may need to include in your API request's URL. These parameters are typically part of the URL structure.
-2. **Parameter Types**: It specifies the data types or formats expected for each path parameter. This information helps you ensure that your parameter values match the expected type.
-3. **Parameter Placement**: Path parameters are typically included directly in the URL's path, and the documentation shows where in the URL to place each parameter.
-1. **Parameter Constraints**: Documentation may outline any constraints or validation rules that path parameters must adhere to, such as minimum/maximum lengths or allowed characters.
-1. **Required Parameters**: It specifies whether a path parameter is required or optional. If a parameter is required, it must be included in the URL for the request to be valid.
-1. **Example URLs**: Documentation often provides examples of complete URLs with path parameters included. These examples serve as templates for constructing your requests.
-1. **Parameter Descriptions**: You'll find descriptions or explanations for each path parameter, helping you understand its purpose and usage within the API request.
+* **Names**: Documentation lists the names of path parameters that you may need to include in your API request's URL.
+* **Types**: The data types or formats expected for each path parameter. This information helps you ensure that your parameter values match the expected type.
+* **Placement**: Path parameters are typically included directly in the URL's path, and the documentation shows where in the URL to place each parameter.
+* **Constraints**: Documentation may outline any constraints or validation rules that path parameters must adhere to, such as minimum/maximum lengths or allowed characters.
+* **Required Parameters**: Whether a path parameter is required or optional. If a parameter is required, it must be included in the URL for the request to be valid.
+* **Example URLs**: Documentation often provides examples of complete URLs with path parameters included. These examples serve as templates for constructing your requests.
+* **Descriptions**: You'll find descriptions or explanations for each path parameter, helping you understand its purpose and usage within the API request.
 
 #### Documentation for Query Parameters typically includes:
-1. **Parameter Names**: Documentation lists the names of query parameters that you may include in your API request's URL. These parameters are typically added after the "?" character in the URL.
-2. **Parameter Types**: It specifies the data types or formats expected for each query parameter, helping you ensure that your parameter values match the expected type.
-2. **Parameter Usage**: Query parameters are typically used to filter, paginate, or customize API responses. Documentation explains how each parameter affects the response.
-2. **Parameter Constraints**: Documentation may outline any constraints or validation rules that query parameters must adhere to, such as valid values or numeric ranges.
-2. **Optional Parameters**: Query parameters are often optional, meaning you can choose whether to include them in the URL. Documentation indicates which parameters are optional and which are required.
-2. **Example URLs**: Documentation provides examples of complete URLs with query parameters included, showing how to structure requests for specific use cases.
-2. **Parameter Descriptions**: You'll find descriptions or explanations for each query parameter, helping you understand its purpose and how it influences the API response.
+* **Names**: Documentation lists the names of query parameters that you may include in your API request's URL. These parameters are typically added after the "?" character in the URL.
+* **Types**: It specifies the data types or formats expected for each query parameter, helping you ensure that your parameter values match the expected type.
+* **Usage**: Query parameters are typically used to filter, paginate, or customize API responses. Documentation explains how each parameter affects the response.
+* **Constraints**: Documentation may outline any constraints or validation rules that query parameters must adhere to, such as valid values or numeric ranges.
+* **Optional Parameters**: Query parameters are often optional, meaning you can choose whether to include them in the URL. Documentation indicates which parameters are optional and which are required.
+* **Example URLs**: Documentation provides examples of complete URLs with query parameters included, showing how to structure requests for specific use cases.
+* **Parameter Descriptions**: You'll find descriptions or explanations for each query parameter, helping you understand its purpose and how it influences the API response.
 
 #### Documentation for Headers typically includes:
-1. **Header Names**: Documentation lists the names of the headers that you may need to include in your API request. These names are case-sensitive and should be entered exactly as specified.
-2. **Header Values**: For each header, it specifies the expected or allowed values. Some headers may have specific values that are required or optional.
-3. **Common Headers**: Commonly used headers like "Authorization," "Content-Type," and "User-Agent" are explained in detail because they are widely used in API requests.
-4. **Example Headers**: Documentation often provides examples of header configurations for different scenarios. These examples serve as templates for your requests.
-5. **Header Descriptions**: You'll find descriptions or explanations for each header, clarifying its purpose and how it affects the API request or response.
-6. **Required Headers**: It specifies whether a header is required or optional. If a header is required, it's crucial to include it in your request; otherwise, the request may fail.
-7. **Header Format**: Information about the format or syntax of headers is given. For instance, some headers require a specific format, like date and time in a specific format.
-8. **Authentication Headers**: If the API uses authentication, the documentation provides details about headers required for authentication, such as API keys or tokens.
-9. **Custom Headers**: In some cases, you may need to include custom headers specific to the API. Documentation explains how to use these headers effectively.
+* **Names**: Documentation lists the names of the headers that you may need to include in your API request. These names are case-sensitive and should be entered exactly as specified.
+* **Values**: For each header, it specifies the expected or allowed values. Some headers may have specific values that are required or optional.
+* **Examples**: Documentation often provides examples of header configurations for different scenarios.
+* **Header Descriptions**: You'll find descriptions or explanations for each header, clarifying its purpose and how it affects the API request or response.
+* **Required Headers**: It specifies whether a header is required or optional. If a header is required, it's crucial to include it in your request; otherwise, the request may fail.
+* **Format**: Information about the format or syntax of headers is given. For instance, some headers require a specific format, like date and time in a specific format.
+* **Authentication Headers**: If the API uses authentication, the documentation provides details about headers required for authentication, such as API keys or tokens.
 
 Below is the [Procore API Documentation](https://developers.procore.com/reference/rest/v1/rfis?version=1.0#create-rfi) on how to create a RFI using a POST request:
 
@@ -472,13 +470,13 @@ Where:
 _How documentation specifies the request body_
 
 API documentation typically displays request body notes by providing detailed information on how to structure and format the data that you need to send in the request body when making an API call. These notes may include:
-1. **Data Format**: Documentation explains the expected data format, which can be JSON, XML, form data, or another format. It specifies how to structure your data.
-2. **Parameters**: It lists the parameters or fields that should be included in the request body. Each parameter is described, including its name, type, and whether it's required.
-3. **Example**: Documentation often provides an example request body, showing you exactly how the data should be structured. This example serves as a template for your requests.
-4. **Data Types**: It clarifies the data types allowed for each parameter (e.g., string, number, boolean) and may specify any constraints or validation rules.
-5. **Validation Rules**: Documentation may detail any specific validation rules or patterns that the data must adhere to, such as minimum/maximum lengths or allowed characters.
-6. **Default Values**: If some parameters have default values, those values are usually documented.
-7. **Notes and Descriptions**: You may find explanations or descriptions of each parameter, helping you understand their purpose and usage.
+* **Data Format**: Documentation explains the expected data format, which can be JSON, XML, form data, or another format.
+* **Parameters**: It lists the parameters or fields that should be included in the request body. Each parameter is described, including its name, type, and whether it's required.
+* **Example**: Documentation often provides an example request body, showing you exactly how the data should be structured.
+* **Data Types**: It clarifies the data types allowed for each parameter (e.g., string, number, boolean) and may specify any constraints or validation rules.
+* **Validation Rules**: Documentation may detail any specific validation rules or patterns that the data must adhere to, such as minimum/maximum lengths or allowed characters.
+* **Default Values**: If some parameters have default values, those values are usually documented.
+* **Notes and Descriptions**: You may find explanations or descriptions of each parameter, helping you understand their purpose and usage.
 
 Below is a screenshot taken from the [Procore API Documentation](https://developers.procore.com/reference/rest/v1/project-folders-and-files?version=1.0#create-project-folder) on how to create a folder in Procore using a POST request:
 ![image](https://github.com/rogers-obrien-rad/api-alchemy/assets/33231914/df1ac7d7-1323-4617-9a5b-ff72564ed5ee)
@@ -496,6 +494,36 @@ The actual JSON data that you would send in the body would look something like t
   }
 }
 ```
+
+### Slide 27: Responses
+_Example responses bodies and status codes_
+
+Documentation typically contains:
+* **Status Codes**: Documentation lists common HTTP status codes that the API request can return.
+* **Response Descriptions**: For each status code, documentation provides a description of what it means in the context of the API.
+* **Example Responses**: Documentation may include sample API responses for each status code. These examples show the structure and content of the response body that you can expect to receive in different scenarios.
+* **Response Formats**: Information about the response format, such as JSON or XML, is usually provided alongside the examples to ensure developers know how to parse and work with the response data.
+
+![image](https://github.com/rogers-obrien-rad/api-alchemy/assets/33231914/b2b9c88c-43eb-41af-aa13-b2eb7bf7bbb0)
+
+Some documenation, like for [Procore's API](https://developers.procore.com/reference/rest/v1/project-folders-and-files?version=1.0#create-project-file), include the response by status code which can be helpful to debug issues. 
+
+### Slide 28: Authentication
+_How to manage authentication for your requests_
+
+In API documentation, authentication is a crucial topic covered to guide developers on how to securely access the API. Here's how authentication is typically addressed in API documentation
+* **Authentication Methods**: API documentation explains the available authentication methods, such as API keys, OAuth tokens, JWT (JSON Web Tokens), or basic authentication.
+* **Authentication Endpoints**: For APIs using OAuth or token-based authentication, documentation provides information on the authentication endpoints, where developers can obtain the necessary tokens or keys.
+* **Authentication Parameters**: Documentation specifies the required authentication parameters that must be included in API requests, such as API keys, tokens, or credentials. It details where to place these parameters, whether in headers, query parameters, or request bodies.
+* **Example Authentication**: To demonstrate the authentication process, API documentation often includes step-by-step examples of how to obtain authentication credentials and use them in API requests.
+* **Rate Limiting**: Some API documentation may mention rate limiting, which restricts the number of requests a client can make within a certain time frame. 
+* **Token Refresh**: If applicable, documentation explains how to refresh authentication tokens and manage token expiration.
+* **Error Handling**: Documentation provides information on error responses related to authentication, helping developers troubleshoot authentication issues.
+
+You can view the authentication documentation for a few APIs:
+* [Procore](https://developers.procore.com/reference/rest/v1/docs/making-first-call)
+* [GitHub](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api?apiVersion=2022-11-28)
+* [NASA](https://api.nasa.gov/)
    
 ## Break (10 minutes)
 
