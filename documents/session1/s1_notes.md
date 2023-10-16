@@ -15,6 +15,11 @@ _General overview of what to expect from the class_
 * **Hands-On Learning**: Stress that these sessions will always have a significant portion dedicated to hands-on, guided learning so that the topics can stick a bit more.
 * **Open Discourse**: Questions are highly encouraged at any point, but be respectful to others if we are going over. Hagen is always available to discuss more on a topic outside of the session. If an answer is not known, Hagen will find it and share with the class at a later time.
 * **Structure**: Training is broken into four 2-hour sessions with a 10-minute break provided around the midpoint of the session.
+* **Resources**: Session agenda, notes, codes, and slides can be found on the GitHu repository page.
+
+## API Basics
+<details><summary>Click to Expand</summary>
+<hr>
 
 ### Slide 4: Definition of APIs
 _Overview of what an API is with examples_
@@ -25,8 +30,6 @@ _Overview of what an API is with examples_
   * **Weather Apps**: Weather apps use APIs to access real-time weather data from external sources. These APIs provide accurate and up-to-date information. By leveraging APIs, weather apps avoid the need to collect and maintain their own weather data.
   * **Social Media**: When you click "Share", an API is invoked, sending the data to the respective social media platform. The platform's API processes the request, posts the content, and provides feedback to the user.
   * **Payment Apps**: When you initiate a payment, the app sends transaction details to the payment gateway's API. The API handles payment authorization, processes the transaction, and returns a response to the app
-
-## Subsection 2: [Advantages of Using APIs](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session1/s1_agenda.md#advantages-of-using-apis-10-minutes)
 
 ### Slide 5: Advantages of APIs
 
@@ -61,8 +64,6 @@ _Procore is a cloud-based construction management platform that provides tools f
 * If we wanted to specify _everyone's_ permissions for a given project, someone would have to go through each individual and update their permissions.
 * We can use the Procore API to do this for us by automating the process. We still have to go one-by-one, but the computer can change someone's permissions in a matter of milliseconds while it might take a user 10 seconds to do the same process (not to mention it would be incredibly boring). 
 
-## Subsection 3: [API Basics](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session1/s1_agenda.md#api-basics-rest-and-soap-10-minutes)
-
 ### Slide 7: API Architecture
 _How the rules of an API are setup to ensure smooth communication_
 
@@ -93,11 +94,40 @@ _How the rules of an API are setup to ensure smooth communication_
 * **Disadvantages**: Less structured than SOAP, not ideal for complex enterprise-level applications.
 
 ### Slide 10: Process Overview
+_General process when invoking an API_
+**Client-Server Architecture**: The API process relies on a client-server model where the client makes requests and the server processes and responds.
 
+1. **Request**:
+   * Initiating Point: The client sends a request using an HTTP method
+   * Contains Data: In some cases, the request carries data (like user credentials, or the specifics of the data being requested)
+2. **Server**:
+   * Processing Center: The server processes the request, interacts with a databases or other necessary component, and creates an appropriate response
+   * May Involve Logic: Depending on the request, the server might execute certain logic or computations before formulating a response
+4. **Response**:
+   * Feedback Mechanism: After processing, the server sends back a response which might contain data, confirmation of a successful operation, or an error message
+   * Formats: Responses can come in various formats, commonly JSON or XML, which the client software can then interpret and display or use as needed
+5. **HTTP**:
+   * Standard Protocol: HTTP is the foundation of data communication for the World Wide Web, used here to transfer requests and responses
+   * Status Codes: HTTP responses contain status codes that indicate the result of the request
+6. **Cycle Continues**: Depending on the application and user actions, this process can happen repeatedly, ensuring real-time interaction and data retrieval
 
-## Subsection 4: [HTTP](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session1/s1_agenda.md#restful-api-concepts-and-http-methods-15-minutes)
+### 🔑 Key Points (Slide 11)
+_Summary from the API Basics section_
 
-### Slide 11: HTTP Structure
+1. **APIs Enhance Software Communication**: Application Programming Interfaces (APIs) enable different software applications to interact and share data seamlessly, from weather updates to payment authorizations.
+2. **APIs Drive Efficiency and Innovation**: They offer time savings, scalability, and swift integration capabilities, letting developers focus more on innovation and less on maintenance.
+3. **Real-world API Applications**: Apps like McBroken and Pokémon Go utilize APIs for real-time data and augmented reality, while platforms like Procore automate repetitive tasks.
+4. **API Architectures Vary in Complexity**: While REST offers a simpler, more modern communication method akin to ordering food, SOAP provides a structured approach resembling a detailed package with instructions.
+5. **API Communication Process**: The typical API process involves a client sending a request to a server, which then processes the request and returns an appropriate response to the client. This interaction ensures timely and accurate data exchange between systems.
+
+<hr>
+</details>
+
+## HTTP
+<details><summary>Click to Expand</summary>
+<hr>
+
+### Slide 12: HTTP Structure
 
 #### Start Line
 _First line of the request/response_
@@ -136,7 +166,9 @@ For responses, the body is often formatted in:
 * XML
 * HTML
 
-### Slide 12: HTTP Methods
+### ❔ What are some HTTP Request Methods?
+
+### Slide 14: HTTP Methods
 _The data manipulation methods used by APIs_
 
 There are [9 HTTP methods in HTTP v1.1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), but there are four/five ones that are commonly used:
@@ -146,8 +178,10 @@ There are [9 HTTP methods in HTTP v1.1](https://developer.mozilla.org/en-US/docs
 * **PATCH**: Applies partial modifications to a resource.
 * **DELETE**: Removes the specified resource.
 
-### Slide 13: Response Status Codes
-_Status of the HTTP request_
+### ❔ What are some HTTP Response Status Codes?
+
+### Slide 16: Response Status Codes
+_Basic breakdown of the status codes you might see when making API calls_
 
 #### 100s - Informational
 An informational response indicates that the request was received and understood. It is issued on a provisional basis while request processing continues. It alerts the client to wait for a final response.
@@ -170,7 +204,7 @@ This class of status code is intended for situations in which the error seems to
 #### 500s - Server-side Error
 Response status codes beginning with the digit "5" indicate cases in which the server is aware that it has encountered an error or is otherwise incapable of performing the request.
 
-### Slide 14: POST Request 
+### Slide 17: POST Request 
 ```http
 POST /api/users HTTP/1.1
 Host: example.com
@@ -202,7 +236,7 @@ Identify the key components:
    }
    ```
 
-### Slide 15: POST Response
+### Slide 18: POST Response
 ```http
 HTTP/1.1 201 Created
 Content-Type: application/json
@@ -232,7 +266,7 @@ Identify the key components:
    }
    ```
 
-### Slide 16: GET Request
+### Slide 19: GET Request
 ```http
 GET /api/users?username=newuser HTTP/1.1
 Host: example.com
@@ -249,7 +283,7 @@ Identify the key components:
 
 ❗ **Important**: We cannot include a body in a GET request so if we need to specify additional information, we do so through the use of query parameters included in the URL.
 
-### Slide 17: GET Response
+### Slide 20: GET Response
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -281,7 +315,7 @@ Identify the key components:
    }
    ```
 
-### Slide 18: PATCH Request
+### Slide 21: PATCH Request
 ```http
 PATCH /api/users/123 HTTP/1.1
 Host: example.com
@@ -309,7 +343,7 @@ Identify the key components:
    }
    ```
 
-### Slide 19: PATCH Response
+### Slide 22: PATCH Response
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -341,7 +375,7 @@ Identify the key components:
    }
    ```
 
-### Slide 20: DELETE Request
+### Slide 23: DELETE Request
 ```http
 DELETE /api/users/123 HTTP/1.1
 Host: example.com
@@ -357,7 +391,7 @@ Identify the key components:
 
 ❗ **Important**: As with GET requests, we cannot include a body for DELETE requests.
 
-### Slide 21: DELETE Response
+### Slide 24: DELETE Response
 ```http
 HTTP/1.1 204 No Content
 ```
@@ -367,48 +401,80 @@ Identify the key components:
    * HTTP Version: `HTTP/1.1`
    * Status Code: `204`
    * Status Text: `No Content`
+
+### 🔑 Key Points (Slide 25)
+_Summary from the HTTP section_
+
+1. **HTTP Structure**:
+   * Start Line: Contains the HTTP method, URL, parameters, and protocol version for requests, and status code, description, and protocol version for responses.
+   * Headers: Provide additional standardized information, such as Authorization, Content-Type, and Host.
+   * Blank Line: Differentiates headers from the body.
+   * Body: Carries additional data, commonly formatted in JSON, XML, or HTML.
+2. **HTTP Methods**: There are many, but the primary ones you will likely deal with are:
+   * POST: Sends data to the server.
+   * GET: Retrieves information using a URI.
+   * PUT: Replaces all representations of the target resource.
+   * PATCH: Partially modifies a resource.
+   * DELETE: Removes the specified resource.
+3. **Response Status Codes**: Look out pimrarily for the 200s 🥰 or the 400s 🤬
+   * 100s: Informational responses.
+   * 200s: Indicate success, e.g., 200 OK, 201 Created.
+   * 300s: Additional steps, often related to URL redirection.
+   * 400s: Client-side errors, e.g., 400 Bad Request, 401 Unauthorized.
+   * 500s: Server-side errors.
+5. **Notable Pointers**:
+   * Bodies are not included in GET and DELETE requests.
+   * Additional information for GET requests is passed using query parameters in the URL.
+  
+<hr>
+</details>
    
 ## Break (10 minutes)
 
-## Subsection 5: [Hands-On: Making API Requests](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session1/s1_agenda.md#hands-on-making-api-requests-45-minutes)
+## Hands-On: Making API Requests
+<details><summary>Click to Expand</summary>
+<hr>
 
-### Slide 23: Hands-On Agenda
+### Slide 27: Hands-On Agenda
 During the Hands-On session, we will be:
 1. Creating a Postman Account
 2. Getting an Overview of the Postman Platform
 3. Making API Requests!
 
-### Slide 24: Creating Postman Account
+### Slide 28: Creating Postman Account
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=99221a09-3806-4a0b-b0a2-9e30567f67a4)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/1_creating_postman_account.md)
 
-### Slide 25: Workspaces and Concepts
+### Slide 29: Workspaces and Concepts
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=c0aa636f-1ff2-476b-997a-6eda96effd20)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/2_workspaces_and_concepts.md)
 
-### Slide 26: Collections
+### Slide 30: Collections
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=4a19a091-0f81-4909-a2f8-11fbde1dbceb)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/3_collections.md)
 
-### Slide 27: GET Requests
+### Slide 31: GET Requests
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=17d7e709-65a7-42fd-88f1-9d891d0bb6fd)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/4_get_requests.md)
 
-### Slide 28: POST request
+### Slide 32: POST request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=d6cb12f6-b44e-4ad2-9590-5529789cda40)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/5_post_requests.md)
 
-### Slide 29: PATCH request
+### Slide 33: PATCH request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=40648793-de3e-494b-8fa6-061aa404b28b)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/6_patch_requests.md)
 
-### Slide 30: DELETE request
+### Slide 34: DELETE request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=a4f21920-a467-4844-b4b6-0a179134ce0e)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/7_delete_requests.md)
+
+<hr>
+</details>
