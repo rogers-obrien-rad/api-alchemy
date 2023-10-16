@@ -19,7 +19,7 @@ _General overview of what to expect from the class_
 * **Structure**: Training is broken into four 2-hour sessions with a 10-minute break provided around the midpoint of the session.
 * **Resources**: Session agenda, notes, codes, and slides can be found on the GitHu repository page.
 
-## API Basics
+## 👶 API Basics
 <details><summary>Click to Expand</summary>
 <hr>
 
@@ -125,7 +125,7 @@ _Summary from the API Basics section_
 <hr>
 </details>
 
-## HTTP
+## 🌐 HTTP
 <details><summary>Click to Expand</summary>
 <hr>
 
@@ -433,7 +433,7 @@ _Summary from the HTTP section_
    
 ## Break (10 minutes)
 
-## Hands-On: Making API Requests
+## 👐 Hands-On: Making API Requests
 <details><summary>Click to Expand</summary>
 <hr>
 
