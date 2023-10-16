@@ -1,6 +1,8 @@
 # Session 1: Introduction to APIs and API Basics (2 hours) 👨‍🏫
 _Gain an understanding of APIs and their role in modern software development, along with exploring the fundamental concepts of REST and SOAP methods._
 
+📹 [Link to Presentation](https://www.beautiful.ai/-Nc2hq90RBkzxASYEW83)
+
 ## Subsection 1: [Introduction and What are APIs?](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session1/s1_agenda.md#introduction-and-what-are-apis-10-minutes)
 
 ### Slide 1: Title
