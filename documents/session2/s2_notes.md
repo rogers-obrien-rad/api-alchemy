@@ -9,13 +9,19 @@ _Delve deeper into handling and manipulating data obtained from APIs, understand
 
 ### Slide 2: Agenda
 
-### Slide 3: Previous Topics
+## Session 1 Review
+<details><summary>Click to Expand</summary>
+<hr>
+
+### Slide 4: Previous Topics
 _A mini-agenda to review topics from the previous session_
 * What are APIs?
 * API Architecture
 * HTTP
 
-### Slide 4: Definition of APIs
+### ❔ What does API stand for?
+
+### Slide 6: Definition of APIs
 _Overview of what an API is with examples_
 
 > An Application Programming Interface is a set of protocols that allows different software applications to communicate, interact, and share data with each other.
@@ -24,8 +30,10 @@ _Overview of what an API is with examples_
   * **Weather Apps**: Weather apps use APIs to access real-time weather data from external sources. These APIs provide accurate and up-to-date information. By leveraging APIs, weather apps avoid the need to collect and maintain their own weather data.
   * **Social Media**: When you click "Share", an API is invoked, sending the data to the respective social media platform. The platform's API processes the request, posts the content, and provides feedback to the user.
   * **Payment Apps**: When you initiate a payment, the app sends transaction details to the payment gateway's API. The API handles payment authorization, processes the transaction, and returns a response to the app
+ 
+### ❔ What does API stand for?
 
-### Slide 5: Case Studies
+### Slide 8: Case Studies
 
 #### [McBroken](https://mcbroken.com/)
 _The McBroken app uses the McDonald's API to track the availability of working ice cream machines at various locations in real-time, providing users with up-to-date information on whether they can get frozen treats._
@@ -40,9 +48,11 @@ _Pokémon Go is an augmented reality mobile game that uses real-world locations 
 _Procore is a cloud-based construction management platform that provides tools for project management, collaboration, scheduling, and financial management._
 * Procore provides permissions templates that sometimes can only be applied on a per-person basis meaning that.
 * If we wanted to specify _everyone's_ permissions for a given project, someone would have to go through each individual and update their permissions.
-* We can use the Procore API to do this for us by automating the process. We still have to go one-by-one, but the computer can change someone's permissions in a matter of milliseconds while it might take a user 10 seconds to do the same process (not to mention it would be incredibly boring). 
+* We can use the Procore API to do this for us by automating the process. We still have to go one-by-one, but the computer can change someone's permissions in a matter of milliseconds while it might take a user 10 seconds to do the same process (not to mention it would be incredibly boring).
 
-### Slide 6: API Architecture
+### ❔ What are the two main types of API architecture?
+
+### Slide 10: API Architecture
 _How the rules of an API are setup to ensure smooth communication_
 
 #### SOAP (Simple Object Access Protocol):
@@ -59,14 +69,14 @@ _How the rules of an API are setup to ensure smooth communication_
 * Simple and straightforward
 * Uses URLs to represent different resources (like menu items), and you use different actions (HTTP methods) to interact with those resources
 
-### Slide 7: Process Overview
+### Slide 11: Process Overview
 _How the API process actually works_
 1. Client (that is you) makes a request using HTTP
 2. Server (that is the program you are accessing) processes the requests, performing the action that you specify (if it can)
 3. Response is generated in HTTP and sent back to you, the Client
 4. Client processes the response
 
-### Slide 8: HTTP Structure
+### Slide 12: HTTP Structure
 
 #### Start Line
 _First line of the request/response_
@@ -105,7 +115,9 @@ For responses, the body is often formatted in:
 * XML
 * HTML
 
-### Slide 9: HTTP Methods
+### ❔ What are some of the common HTTP methods?
+
+### Slide 14: HTTP Methods
 _The data manipulation methods used by APIs_
 
 There are [9 HTTP methods in HTTP v1.1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), but there are four/five ones that are commonly used:
@@ -115,7 +127,7 @@ There are [9 HTTP methods in HTTP v1.1](https://developer.mozilla.org/en-US/docs
 * **PATCH**: Applies partial modifications to a resource.
 * **DELETE**: Removes the specified resource.
 
-### Slide 10: POST Request 
+### Slide 15: POST Request 
 ```http
 POST /api/users HTTP/1.1
 Host: example.com
@@ -147,7 +159,7 @@ Identify the key components:
    }
    ```
 
-### Slide 11: POST Response
+### Slide 16: POST Response
 ```http
 HTTP/1.1 201 Created
 Content-Type: application/json
@@ -177,7 +189,7 @@ Identify the key components:
    }
    ```
 
-### Slide 12: Response Status Codes
+### Slide 17: Response Status Codes
 _Status of the HTTP request_
 
 #### 100s - Informational
@@ -201,9 +213,16 @@ This class of status code is intended for situations in which the error seems to
 #### 500s - Server-side Error
 Response status codes beginning with the digit "5" indicate cases in which the server is aware that it has encountered an error or is otherwise incapable of performing the request.
 
-## Subsection 2: [API Data Formats and Handling Responses](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#api-data-formats-and-handling-responses-10-minutes)
+<hr>
+</details>
 
-### Slide 13: XML
+## API Data Formats and Handling Responses
+<details><summary>Click to Expand</summary>
+<hr>
+
+### ❔ What are the two msot common API data formats?
+
+### Slide 20: XML
 _What is XML and what are some key characteristics_
 
 XML (eXtensible Markup Language) is a widely used format for structuring and representing data that needs to be exchanged between different software systems. XML is not limited to APIs; it's also used for data storage, configuration files, and more.
@@ -223,7 +242,7 @@ XML (eXtensible Markup Language) is a widely used format for structuring and rep
 * **Hierarchy**: XML documents have a hierarchical structure, with elements nested within other elements to create a tree-like arrangement.
 * **Closing Tags**: Each opening tag must have a corresponding closing tag (e.g., `<tag>data</tag>`).
 
-### Slide 14: XML Example
+### Slide 21: XML Example
 
 ```xml
 <bookstore>
@@ -240,7 +259,7 @@ XML (eXtensible Markup Language) is a widely used format for structuring and rep
 </bookstore>
 ```
 
-### Slide 15: JSON Data
+### Slide 22: JSON Data
 _What is JSON and what are some key characteristics_
 
 JSON (JavaScript Object Notation) is:
@@ -259,7 +278,7 @@ JSON (JavaScript Object Notation) is:
 * **Values**: Values can be strings, numbers, booleans, objects, arrays, or null.
 * **Keys**: Keys are strings that represent the names of values within objects.
 
-### Slide 16: JSON Example
+### Slide 23: JSON Example
 
 ```json
 {
@@ -282,9 +301,22 @@ JSON (JavaScript Object Notation) is:
 }
 ```
 
-## Subsection 3: [API Access and Security](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#api-access-and-security-20-minutes)
+### 🔑 Key Points (Slide 24)
+1. **XML (eXtensible Markup Language)**:
+   * XML is a human-readable and machine-readable markup language that structures data in a standardized way, commonly used in APIs.
+   * XML offers flexibility through custom tags and structures, with data organized using tags, attributes, and a hierarchical tree structure.
+2. JSON (JavaScript Object Notation)
+   * JSON is a lightweight data interchange format that is efficient for data exchange, especially between different software systems.
+   * JSON represents data using key-value pairs and has a simpler syntax compared to XML, making it easier to use.
 
-### Slide 17: Authentication versus Authorization
+<hr>
+</details>
+
+## API Access and Security
+<details><summary>Click to Expand</summary>
+<hr>
+
+### Slide 26: Authentication versus Authorization
 _Differences between the widely interchanged words_
 
 #### Authentication
@@ -297,7 +329,7 @@ Authorization, on the other hand, comes after authentication and involves granti
 * **Authentication** is about confirming the identity of a user.
 * **Authorization** is about granting or denying access to specific resources or actions based on the user's verified identity and permissions
 
-### Slide 18: Common Authentication Methods
+### Slide 27: Common Authentication Methods
 
 #### API Keys
 * API keys are simple and widely used for authentication.
@@ -316,7 +348,7 @@ Authorization, on the other hand, comes after authentication and involves granti
 * The credentials are typically base64-encoded (but not encrypted), making it important to use HTTPS for secure transmission.
 * While simple to implement, Basic Authentication is less secure due to the risk of credentials being intercepted.
 
-### Slide 19: Basic Authentication
+### Slide 28: Basic Authentication
 _Standard username and password_
 
 A developer accessing a private GitHub repository using the Git command-line tool. The tool prompts for a username and password, which the developer provides. The credentials are then base64-encoded and included in the Git request headers for authentication.
@@ -327,7 +359,7 @@ Username: your_username
 Password: your_password
 ```
 
-### Slide 20: API Keys
+### Slide 29: API Keys
 _Keys provided in header or query parameters_
 
 Using a weather API to fetch weather information for your application. The API provider gives you a unique API key. To authenticate, you include the API key in the request URL when making API calls.
@@ -336,7 +368,7 @@ Using a weather API to fetch weather information for your application. The API p
 GET https://api.weather.com/forecast?api_key=your_api_key
 ```
 
-### Slide 21: Token-based
+### Slide 30: Token-based
 _Similar to keys but token expires_
 
 A mobile app that interacts with a user's social media account. After the user logs in, the app receives a JWT (JSON Web Token). When making requests to the social media API, the app includes the JWT in the request headers.
@@ -346,9 +378,22 @@ GET https://api.socialmedia.com/posts
 Authorization: Bearer your_jwt
 ```
 
-## Subsection 4: [API Documentation](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#api-documentation-and-how-to-useread-it-10-minutes)
+### 🔑 Key Points (Slide 31)
+_Summary of the API Access and Security section_
 
-### Slide 22: Navigating Docs
+1. **Authentication vs. Authorization**: Authentication is the process of verifying a user's identity (e.g., through username/password), while authorization determines the access or actions a user can perform based on their permissions.
+2. **API Keys**: Simple alphanumeric strings given by API providers to authenticate clients. Often used for public APIs with lower security requirements and can be passed in headers or query parameters.
+3. **Bearer Token Authentication**: Uses tokens, like JWT or OAuth 2.0 access tokens. Upon successful authentication, clients receive an access token to include in request headers, offering flexibility and scalability.
+4. **Basic Authentication**: Involves sending base64-encoded usernames and passwords in request headers. It's simple but less secure due to potential interception risks.
+
+<hr>
+</details>
+
+## API Documentation
+<details><summary>Click to Expand</summary>
+<hr>
+
+### Slide 33: Navigating Docs
 _A guidebook to the API's capabilities and usage_
 
 Key components of API documentation include:
@@ -362,7 +407,7 @@ Some examples:
 * [OpenWeatherMap API Docs](https://openweathermap.org/current#concept)
 * [NASA API Docs](https://ssd-api.jpl.nasa.gov/doc/index.php)
 
-### Slide 23: Endpoints
+### Slide 34: Endpoints
 _More details on endpoints_
 * **Definition**: Endpoints are specific URLs that represent different functions or resources within an API. Each endpoint corresponds to a particular action or retrieval of data.
 * **Purpose**: Endpoints act as the entry points for clients (applications or users) to interact with an API. They provide a structured way to access specific functionalities offered by the API.
@@ -390,7 +435,7 @@ POST /api/posts
 }
 ```
 
-### Slide 24: Parameters
+### Slide 35: Parameters
 _The three types of parematers and what their usage is_
 
 #### Header Parameters
@@ -405,7 +450,7 @@ _The three types of parematers and what their usage is_
 * **Purpose**: Query parameters enable customization and filtering of API requests by providing additional information to the server.
 * **Usage**: Query parameters are appended to the URL after a question mark (?). They are in the form of key-value pairs, separated by &. Query parameters help modify the behavior of the request, such as specifying search terms, filters, sorting options, or pagination limits. For example, in a URL like `/products?category=electronics&sort=price`, `category` and `sort` are query parameters.
 
-### Slide 25: Parameters Example
+### Slide 36: Parameters Example
 _How parameters are documented_
 
 #### Documentation for Path Parameters typically includes:
@@ -466,7 +511,7 @@ Where:
 * **Path Parameter**: `681425` is placed in the URL
 * **Query Parameter**: `run_configurable_validation` is placed after the question mark "?"
 
-### Slide 26: Request Body
+### Slide 37: Request Body
 _How documentation specifies the request body_
 
 API documentation typically displays request body notes by providing detailed information on how to structure and format the data that you need to send in the request body when making an API call. These notes may include:
@@ -495,7 +540,7 @@ The actual JSON data that you would send in the body would look something like t
 }
 ```
 
-### Slide 27: Responses
+### Slide 38: Responses
 _Example responses bodies and status codes_
 
 Documentation typically contains:
@@ -508,7 +553,7 @@ Documentation typically contains:
 
 Some documenation, like for [Procore's API](https://developers.procore.com/reference/rest/v1/project-folders-and-files?version=1.0#create-project-file), include the response by status code which can be helpful to debug issues. 
 
-### Slide 28: Authentication
+### Slide 39: Authentication
 _How to manage authentication for your requests_
 
 In API documentation, authentication is a crucial topic covered to guide developers on how to securely access the API. Here's how authentication is typically addressed in API documentation
@@ -524,33 +569,41 @@ You can view the authentication documentation for a few APIs:
 * [Procore](https://developers.procore.com/reference/rest/v1/docs/making-first-call)
 * [GitHub](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api?apiVersion=2022-11-28)
 * [NASA](https://api.nasa.gov/)
+
+<hr>
+</details>
    
 ## Break (10 minutes)
 
-## Subsection 5: [Hands-On: Making API Requests](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session1/s1_agenda.md#hands-on-making-api-requests-45-minutes)
+## Hands-On: Making API Requests
+<details><summary>Click to Expand</summary>
+<hr>
 
-### Slide 30: Hands-On Agenda
+### Slide 41: Hands-On Agenda
 During the Hands-On Session we will be:
 1. Learning how to extract data from responses systematically
 2. Use the Procore API
 
-### Slide 31: Using Reponse Data in Postman
+### Slide 42: Using Reponse Data in Postman
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=15175606-2fee-4929-8d2c-8e6a699d3ecc)
 * For OthersL [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/8_using_response_data.md)
 
-### Slide 32: Using Reponse Data in Postman
+### Slide 43: Using Reponse Data in Postman
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/Tqbx9ygc/Procore-API?activeCard=231f1661-2254-403b-b5af-cf29a4673a02)
 
-### Slide 33: Using Reponse Data in Postman
+### Slide 44: Using Reponse Data in Postman
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/Tqbx9ygc/Procore-API?activeCard=952225df-921e-4fea-b22d-f283a37be009)
 
-### Slide 34: Using Reponse Data in Postman
+### Slide 45: Using Reponse Data in Postman
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/Tqbx9ygc/Procore-API?activeCard=335584a3-b7e4-4ab1-841b-8651ec8e5df5)
 
-### Slide 35: Using Reponse Data in Postman
+### Slide 46: Using Reponse Data in Postman
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/Tqbx9ygc/Procore-API?activeCard=a0d189d5-1a15-4f5a-b360-abade464150e)
+
+<hr>
+</details>
