@@ -21,7 +21,7 @@ _General overview of what to expect from the class_
 <details><summary>Click to Expand</summary>
 <hr>
 
-### Slide 4: Definition of APIs
+### Slide 5: Definition of APIs
 _Overview of what an API is with examples_
 
 > An Application Programming Interface is a set of protocols that allows different software applications to communicate, interact, and share data with each other.
@@ -31,7 +31,7 @@ _Overview of what an API is with examples_
   * **Social Media**: When you click "Share", an API is invoked, sending the data to the respective social media platform. The platform's API processes the request, posts the content, and provides feedback to the user.
   * **Payment Apps**: When you initiate a payment, the app sends transaction details to the payment gateway's API. The API handles payment authorization, processes the transaction, and returns a response to the app
 
-### Slide 5: Advantages of APIs
+### Slide 6: Advantages of APIs
 
 #### Efficiency
 * **Time savings**: No manual data entry and no manual code development. Simply use the API to pull the data you need.
@@ -47,7 +47,7 @@ _Overview of what an API is with examples_
 * **Reduced maintenance**: If you created your process to push or pull data, you would personally need to maintain that. If you use APIs, the platform will ensure that these pathways remain stable even if they change how their front- or back-end works. 
 * **Choose what you need**: API pathways are generally specific to what functions they can accomplish. Rather than doing bulk actions that could be time-consuming or provide excessive information, you can do exactly what you like. 
 
-### Slide 6: Case Studies
+### Slide 7: Case Studies
 
 #### [McBroken](https://mcbroken.com/)
 _The McBroken app uses the McDonald's API to track the availability of working ice cream machines at various locations in real-time, providing users with up-to-date information on whether they can get frozen treats._
@@ -64,7 +64,7 @@ _Procore is a cloud-based construction management platform that provides tools f
 * If we wanted to specify _everyone's_ permissions for a given project, someone would have to go through each individual and update their permissions.
 * We can use the Procore API to do this for us by automating the process. We still have to go one-by-one, but the computer can change someone's permissions in a matter of milliseconds while it might take a user 10 seconds to do the same process (not to mention it would be incredibly boring). 
 
-### Slide 7: API Architecture
+### Slide 8: API Architecture
 _How the rules of an API are setup to ensure smooth communication_
 
 #### REST (Representational State Transfer):
@@ -81,19 +81,19 @@ _How the rules of an API are setup to ensure smooth communication_
 * Can use different delivery methods (transport protocols) like HTTP, SMTP (email), etc.
 * Has a fixed structure (XML) for messages, making sure everyone understands the message format
 
-### Slide 8: SOAP Overview
+### Slide 9: SOAP Overview
 * **Principle**: Uses more formal rules, like sending a detailed package with instructions.
 * **Use Cases**: Suited for complex applications, often used in big businesses and industries where strict communication is needed.
 * **Advantages**: Structured and secure. Provides strict standards for messaging and security, suitable for enterprise scenarios.
 * **Disadvantages**: Heavier and more complex compared to REST. May not be suitable for lightweight applications.
 
-### Slide 9: REST Overview
+### Slide 10: REST Overview
 * **Principle**: Uses simple rules to communicate over the internet, like talking to a waiter to order food.
 * **Use Cases**: Best for simpler applications like mobile apps and websites, where quick communication is important.
 * **Advantages**: Easy to understand, lightweight, and flexible. Works well for microservices and modern web applications.
 * **Disadvantages**: Less structured than SOAP, not ideal for complex enterprise-level applications.
 
-### Slide 10: Process Overview
+### Slide 11: Process Overview
 _General process when invoking an API_
 **Client-Server Architecture**: The API process relies on a client-server model where the client makes requests and the server processes and responds.
 
@@ -111,7 +111,7 @@ _General process when invoking an API_
    * Status Codes: HTTP responses contain status codes that indicate the result of the request
 6. **Cycle Continues**: Depending on the application and user actions, this process can happen repeatedly, ensuring real-time interaction and data retrieval
 
-### 🔑 Key Points (Slide 11)
+### 🔑 Key Points (Slide 12)
 _Summary from the API Basics section_
 
 1. **APIs Enhance Software Communication**: Application Programming Interfaces (APIs) enable different software applications to interact and share data seamlessly, from weather updates to payment authorizations.
@@ -127,7 +127,7 @@ _Summary from the API Basics section_
 <details><summary>Click to Expand</summary>
 <hr>
 
-### Slide 12: HTTP Structure
+### Slide 14: HTTP Structure
 
 #### Start Line
 _First line of the request/response_
@@ -168,7 +168,7 @@ For responses, the body is often formatted in:
 
 ### ❔ What are some HTTP Request Methods?
 
-### Slide 14: HTTP Methods
+### Slide 16: HTTP Methods
 _The data manipulation methods used by APIs_
 
 There are [9 HTTP methods in HTTP v1.1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), but there are four/five ones that are commonly used:
@@ -180,7 +180,7 @@ There are [9 HTTP methods in HTTP v1.1](https://developer.mozilla.org/en-US/docs
 
 ### ❔ What are some HTTP Response Status Codes?
 
-### Slide 16: Response Status Codes
+### Slide 18: Response Status Codes
 _Basic breakdown of the status codes you might see when making API calls_
 
 #### 100s - Informational
@@ -204,7 +204,7 @@ This class of status code is intended for situations in which the error seems to
 #### 500s - Server-side Error
 Response status codes beginning with the digit "5" indicate cases in which the server is aware that it has encountered an error or is otherwise incapable of performing the request.
 
-### Slide 17: POST Request 
+### Slide 19: POST Request 
 ```http
 POST /api/users HTTP/1.1
 Host: example.com
@@ -236,7 +236,7 @@ Identify the key components:
    }
    ```
 
-### Slide 18: POST Response
+### Slide 20: POST Response
 ```http
 HTTP/1.1 201 Created
 Content-Type: application/json
@@ -266,7 +266,7 @@ Identify the key components:
    }
    ```
 
-### Slide 19: GET Request
+### Slide 21: GET Request
 ```http
 GET /api/users?username=newuser HTTP/1.1
 Host: example.com
@@ -283,7 +283,7 @@ Identify the key components:
 
 ❗ **Important**: We cannot include a body in a GET request so if we need to specify additional information, we do so through the use of query parameters included in the URL.
 
-### Slide 20: GET Response
+### Slide 22: GET Response
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -315,7 +315,7 @@ Identify the key components:
    }
    ```
 
-### Slide 21: PATCH Request
+### Slide 23: PATCH Request
 ```http
 PATCH /api/users/123 HTTP/1.1
 Host: example.com
@@ -343,7 +343,7 @@ Identify the key components:
    }
    ```
 
-### Slide 22: PATCH Response
+### Slide 24: PATCH Response
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -375,7 +375,7 @@ Identify the key components:
    }
    ```
 
-### Slide 23: DELETE Request
+### Slide 25: DELETE Request
 ```http
 DELETE /api/users/123 HTTP/1.1
 Host: example.com
@@ -391,7 +391,7 @@ Identify the key components:
 
 ❗ **Important**: As with GET requests, we cannot include a body for DELETE requests.
 
-### Slide 24: DELETE Response
+### Slide 26: DELETE Response
 ```http
 HTTP/1.1 204 No Content
 ```
@@ -402,7 +402,7 @@ Identify the key components:
    * Status Code: `204`
    * Status Text: `No Content`
 
-### 🔑 Key Points (Slide 25)
+### 🔑 Key Points (Slide 27)
 _Summary from the HTTP section_
 
 1. **HTTP Structure**:
@@ -435,43 +435,43 @@ _Summary from the HTTP section_
 <details><summary>Click to Expand</summary>
 <hr>
 
-### Slide 27: Hands-On Agenda
+### Slide 29: Hands-On Agenda
 During the Hands-On session, we will be:
 1. Creating a Postman Account
 2. Getting an Overview of the Postman Platform
 3. Making API Requests!
 
-### Slide 28: Creating Postman Account
+### Slide 30: Creating Postman Account
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=99221a09-3806-4a0b-b0a2-9e30567f67a4)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/1_creating_postman_account.md)
 
-### Slide 29: Workspaces and Concepts
+### Slide 31: Workspaces and Concepts
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=c0aa636f-1ff2-476b-997a-6eda96effd20)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/2_workspaces_and_concepts.md)
 
-### Slide 30: Collections
+### Slide 32: Collections
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=4a19a091-0f81-4909-a2f8-11fbde1dbceb)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/3_collections.md)
 
-### Slide 31: GET Requests
+### Slide 33: GET Requests
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=17d7e709-65a7-42fd-88f1-9d891d0bb6fd)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/4_get_requests.md)
 
-### Slide 32: POST request
+### Slide 34: POST request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=d6cb12f6-b44e-4ad2-9590-5529789cda40)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/5_post_requests.md)
 
-### Slide 33: PATCH request
+### Slide 35: PATCH request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=40648793-de3e-494b-8fa6-061aa404b28b)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/6_patch_requests.md)
 
-### Slide 34: DELETE request
+### Slide 36: DELETE request
 Use the links below to find more information:
 * For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=a4f21920-a467-4844-b4b6-0a179134ce0e)
 * For Others: [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/7_delete_requests.md)
