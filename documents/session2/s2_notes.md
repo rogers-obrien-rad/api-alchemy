@@ -9,7 +9,7 @@ _Delve deeper into handling and manipulating data obtained from APIs, understand
 
 ### Slide 2: Agenda
 
-## Session 1 Review
+## 👨‍🏫 Session 1 Review
 <details><summary>Click to Expand</summary>
 <hr>
 
@@ -216,7 +216,7 @@ Response status codes beginning with the digit "5" indicate cases in which the s
 <hr>
 </details>
 
-## API Data Formats and Handling Responses
+## ℹ️ API Data Formats and Handling Responses
 <details><summary>Click to Expand</summary>
 <hr>
 
@@ -312,7 +312,7 @@ JSON (JavaScript Object Notation) is:
 <hr>
 </details>
 
-## API Access and Security
+## 🔐 API Access and Security
 <details><summary>Click to Expand</summary>
 <hr>
 
@@ -389,7 +389,7 @@ _Summary of the API Access and Security section_
 <hr>
 </details>
 
-## API Documentation
+## 📝 API Documentation
 <details><summary>Click to Expand</summary>
 <hr>
 
@@ -575,7 +575,7 @@ You can view the authentication documentation for a few APIs:
    
 ## Break (10 minutes)
 
-## Hands-On: Making API Requests
+## 👐Hands-On: Making API Requests
 <details><summary>Click to Expand</summary>
 <hr>
 
