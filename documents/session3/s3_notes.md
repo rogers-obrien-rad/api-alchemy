@@ -272,9 +272,6 @@ def check_value():
     return x + y  # Can access global variable 'x' inside this function
 ```
 
-<hr>
-</details>
-
 ### Slide 24: Package Imports
 In Python, we can enhance the default capabilities by importing external packages. This is done using the import keyword. In the script, two packages are imported:
 
@@ -286,12 +283,25 @@ import requests
 ```python
 import pandas as pd
 ```
+
+<hr>
+</details> 
    
 ## Break (10 minutes)
 
 ## 👐 Hands-On: Making API Requests
 <details><summary>Click to Expand</summary>
 <hr>
+
+### Slide 25: Python `requests` Library
+
+### Slide 26: GET Request
+
+### Slide 27: Check Status Code
+
+### Slide 28: Check Response Content
+
+
 
 ### Slide 30: Hands-On Agenda
 During the Hands-On Session we will be:
