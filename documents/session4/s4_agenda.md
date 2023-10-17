@@ -1,20 +1,22 @@
-# Session 3: Using Python for API Calls and Data Manipulation (2 hours) 🐍
-_Overview: Explore using Python to make API calls and manipulate JSON data using dictionaries and Pandas DataFrames._
+# Session 4: More Python for API Calls and API Workshop (2 hours) 🛠️
+_Overview: Continue using Python to make API calls and brainstorm ways to use your knowledge of APIs_
 
-1. Session 2 Review (10 minutes)
-    * JSON Format
-    * Authetication and Authorization: API Keys and tokens
-    * API Documentation
+1. Session 3 Review (15 minutes)
+    * Python basics
+    * `requests` library in Python
+    * Procore API in Python
 
-2. Python for API Calls
-    * Using the requests library to make API requests in Python.
-    * Handling API responses and extracting data.
+2. Challenge: GET and POST Requests in Python (30 minutes)
+    * See who can use the `requests` library to make a GET request the fastest
+    * See who can use the `requests` library to make a POST request the fastest
 
-3. Using Pandas DataFrames
-    * Understanding JSON data structures and dictionaries in Python.
-    * Introduction to Pandas library for data manipulation.
-    * Converting JSON data to Pandas DataFrames for analysis.
+3. Using Pandas DataFrames to Manipulate Data (15 minutes)
+    * Brief introduction to Pandas library for data manipulation
+    * Converting JSON data to Pandas DataFrames for analysis
+    * Using Pandas to save data in `.csv` or `.xlsx` formats
 
-4. Hands-On: Python API Integration and Data Analysis
-    * Get setup: download Python, Git, and Visual Studio Code
-    * Practice using the Python to make API calls
+4. Workshop: How can you use APIs? (50 minutes)
+    * Identify pain points & opportunities
+    * Research and discover relevant APIs
+    * Brainstorm implementation ideas
+    * Develop actionable next steps
