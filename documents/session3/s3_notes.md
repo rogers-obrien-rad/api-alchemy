@@ -1,9 +1,7 @@
-# Session 3: Using Python for API Calls and Data Manipulation 🐍
+# Session 3: Using Python for API Calls 🐍
 _Leveling up from Postman to Python_
 
 📹 [Link to Presentation](https://www.beautiful.ai/-Nd6mf12-F_Jh78lUfQM/8)
-
-## Subsection 1: [Session 2 Review](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#session-1-review-10-minutes)
 
 ### Slide 1: Title
 
@@ -116,7 +114,7 @@ Some examples:
 <hr>
 </details>
 
-## 👐 Hands-On: Making API Requests
+## 👐 Hands-On: Python Basics 🐍
 <details><summary>Click to Expand</summary>
 <hr>
 
@@ -289,18 +287,54 @@ import pandas as pd
    
 ## Break (10 minutes)
 
-## 👐 Hands-On: Making API Requests
+## 👐 Hands-On: API Requests in Python
 <details><summary>Click to Expand</summary>
 <hr>
 
 ### Slide 25: Python `requests` Library
 
+1. **HTTP Wrapper**: The requests library is a popular Python package used for making HTTP requests. It abstracts the complexities of making requests behind a simple API, providing an intuitive way to send HTTP requests and handle responses.
+2. **Methods**: It supports all major HTTP methods like GET, POST, PUT, DELETE, etc., through simple method calls.
+3. **Response Handling**: Responses from servers can be easily parsed, and the library provides convenient methods to extract useful information, such as `response.text`, `response.json()`, and `response.status_code`.
+
 ### Slide 26: GET Request
+
+This code snippet shows how to make an HTTP GET request to retrieve data from a specified URL using the `requests` library in Python.
+
+```python
+url = "https://jsonplaceholder.typicode.com/posts/1"
+headers = {}  # Empty headers dictionary
+params = {}  # Empty parameters dictionary
+
+response_get = requests.get(url, headers=headers, params=params)
+```
+
+1. The target URL, `https://jsonplaceholder.typicode.com/posts/1`, is stored in the variable `url`.
+2. An empty dictionary named `headers` is created; in this case, no headers are being sent.
+3. Another empty dictionary named `params` is created; Again, in this instance, no parameters are being sent.
+4. The `requests.get()` method is called using the provided `url`, `headers`, and `params`. This sends an HTTP GET request to the specified URL. The response from this request (which will typically include the data from the server) is stored in the variable `response_get`.
 
 ### Slide 27: Check Status Code
 
+
+
 ### Slide 28: Check Response Content
 
+
+
+### Slide 29: Check Response Headers
+
+
+
+### Slide 30: POST Request
+
+
+
+### Slide 31: PUT Request
+
+
+
+### Slide 32: DELETE Request
 
 
 ### Slide 30: Hands-On Agenda
