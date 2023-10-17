@@ -62,7 +62,7 @@ _Pokémon Go is an augmented reality mobile game that uses real-world locations 
 
 #### Procore Permissioning
 _Procore is a cloud-based construction management platform that provides tools for project management, collaboration, scheduling, and financial management._
-* Procore provides permissions templates that sometimes can only be applied on a per-person basis meaning that.
+* Procore provides permissions templates that sometimes can only be applied on a per-person basis
 * If we wanted to specify _everyone's_ permissions for a given project, someone would have to go through each individual and update their permissions.
 * We can use the Procore API to do this for us by automating the process. We still have to go one-by-one, but the computer can change someone's permissions in a matter of milliseconds while it might take a user 10 seconds to do the same process (not to mention it would be incredibly boring). 
 
@@ -97,6 +97,7 @@ _How the rules of an API are setup to ensure smooth communication_
 
 ### Slide 11: Process Overview
 _General process when invoking an API_
+
 **Client-Server Architecture**: The API process relies on a client-server model where the client makes requests and the server processes and responds.
 
 1. **Request**:
