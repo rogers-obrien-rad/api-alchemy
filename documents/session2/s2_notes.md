@@ -584,10 +584,11 @@ During the Hands-On Session we will be:
 1. Learning how to extract data from responses systematically
 2. Use the Procore API
 
-### Slide 42: Using Reponse Data in Postman
-Use the links below to find more information:
-* For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=15175606-2fee-4929-8d2c-8e6a699d3ecc)
-* For OthersL [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/8_using_response_data.md)
+### 🏆 Challenge: Making a GET Request
+Use the [PokeAPI](https://pokeapi.co/) in Postman to make a request to get data on your favorite Pokemon!
+1. Navigate to the [PokeAPI](https://pokeapi.co/docs/v2 ) documentation and find the endpoint that gives you the overall information on a Pokemon
+2. Craft the GET request in [Postman](www.postman.com)
+3. Be the first to do so and win a prize!
 
 ### Slide 43: Using Reponse Data in Postman
 Use the links below to find more information:
