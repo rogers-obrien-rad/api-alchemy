@@ -3,8 +3,6 @@ _Delve deeper into handling and manipulating data obtained from APIs, understand
 
 📹 [Link to Presentation](https://www.beautiful.ai/player/-NcT8oMgP1-HCOsKJEM0)
 
-## Subsection 1: [Session 1 Review](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/session2/s2_agenda.md#session-1-review-10-minutes)
-
 ### Slide 1: Title
 
 ### Slide 2: Agenda
