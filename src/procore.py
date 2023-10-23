@@ -22,7 +22,8 @@ headers = {"Content-Type": "application/json"}
 body = {
     "grant_type": "client_credentials",
     "client_id": client_id,
-    "client_secret": client_secret
+    "client_secret": client_secret,
+    "redirect_uri": "urn:ietf:wg:oauth:2.0:oob"
 }
 
 response = requests.post(
@@ -68,14 +69,14 @@ headers = {
     "Procore-Company-Id": f"{company_id}"
 }
 
-params = {
+query_params = {
     "company_id": f"{company_id}"
 }
 
 response = requests.get(
     url=f"{BASE_URL}{endpoint}",
     headers=headers,
-    params=params
+    params=query_params
 )
 
 project_data = response.json()
@@ -99,14 +100,14 @@ headers = {
     "Procore-Company-Id": f"{company_id}"
 }
 
-params = {
-    "project_id": "1668030" # hard-coded South Lamar project ID
+query_params = {
+    "project_id": "291567" # hard-coded Sandbox project ID
 }
 
 response = requests.get(
     url=f"{BASE_URL}{endpoint}",
     headers=headers,
-    params=params
+    params=query_params
 )
 
 folders_data = response.json()
@@ -116,9 +117,9 @@ for folder in folders_data["folders"]:
     print(end="") # just a placeholder
     #print(f"{folder['id']}: {folder['name']}")
 
-# Individual Folder
-# -----------------
-# Documentation: https://developers.procore.com/reference/rest/v1/project-folders-and-files?version=1.0#show-project-folder
+# Submittals
+# ----------
+# Documentation: https://developers.procore.com/reference/rest/v1/submittals?version=1.1#list-submittals-on-a-project
 
 # To work on together
 

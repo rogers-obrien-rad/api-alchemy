@@ -4,6 +4,8 @@ import json
 from dotenv import load_dotenv
 load_dotenv()
 
+from datetime import datetime, timedelta
+
 import requests
 
 BASE_URL = "https://app.procore.com"
@@ -22,7 +24,8 @@ headers = {"Content-Type": "application/json"}
 body = {
     "grant_type": "client_credentials",
     "client_id": client_id,
-    "client_secret": client_secret
+    "client_secret": client_secret,
+    "redirect_uri": "urn:ietf:wg:oauth:2.0:oob"
 }
 
 response = requests.post(
@@ -98,7 +101,7 @@ headers = {
 }
 
 params = {
-    "project_id": "1668030" # hard-coded South Lamar project ID
+    "project_id": "291567" # hard-coded Sandbox project ID
 }
 
 response = requests.get(
@@ -113,31 +116,22 @@ folders_data = response.json()
 for folder in folders_data["folders"]:
     print(f"{folder['id']}: {folder['name']}")
 
-# Individual Folder
-# -----------------
-# Documentation: https://developers.procore.com/reference/rest/v1/project-folders-and-files?version=1.0#show-project-folder
+# Submittals
+# ----------
+# Documentation: https://developers.procore.com/reference/rest/v1/submittals?version=1.1#list-submittals-on-a-project
 
-folder_id = 414318357 # hard-coded I-Safety and Environmental folder ID
-endpoint = f"/rest/v1.0/folders/{folder_id}"
+project_id = 291567
 
-headers = {
-    "Authorization": f"Bearer {access_token}",
-    "Procore-Company-Id": f"{company_id}"
-}
-
-params = {
-    "project_id": "1668030" # hard-coded South Lamar project ID
-}
+endpoint = f"/rest/v1.1/projects/{project_id}/submittals"
 
 response = requests.get(
     url=f"{BASE_URL}{endpoint}",
-    headers=headers,
-    params=params
+    headers=headers
 )
 
-folder_data = response.json()
+submittal_data = response.json()
 
-print(json.dumps(folder_data, indent=4))
+print(f"Number of Submittals: {len(submittal_data)}")
 
 # RFIs
 # ----
