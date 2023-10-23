@@ -284,8 +284,6 @@ import pandas as pd
 
 <hr>
 </details> 
-   
-## Break (10 minutes)
 
 ## 👐 Hands-On: API Requests in Python
 <details><summary>Click to Expand</summary>
@@ -316,52 +314,265 @@ response_get = requests.get(url, headers=headers, params=params)
 
 ### Slide 27: Check Status Code
 
+The snippet checks the status code of a response from a GET request. If the request was successful (status code 200), it prints a success message. Otherwise, it prints an error message with the received status code.
 
+```python
+if response_get.status_code == 200:
+    print("GET request was successful!")
+else:
+    print(f"Failed with status code: {response_get.status_code}")
+```
+
+1. `response_get.status_code`: This accesses the status code of the HTTP response that was stored in the response_get object. The status code is a numerical value indicating the result of the HTTP request.
+2. `if response_get.status_code == 200:`: The condition checks if the status code is 200. An HTTP status code of 200 means "OK" and indicates that the request was successful.
+3. `print("GET request was successful!")`: If the status code is indeed 200, this message will be printed, indicating a successful GET request.
+4. `else:`: If the status code is anything other than 200, the code within this block will execute.
+5. `print(f"Failed with status code: {response_get.status_code}")`: This prints an error message along with the actual status code that was received. This provides insight into what might have gone wrong, as different status codes represent different types of errors or statuses.
 
 ### Slide 28: Check Response Content
 
+This snippet first shows the raw content of the server's response and then displays a parsed version if the content is in JSON format.
 
+```python
+ The 'text' attribute provides the response content as a string.
+print("\nResponse Content:")
+print(response_get.text)
+
+# --- Parsing JSON Responses ---
+# If the response is in JSON format, we can parse it into a Python dictionary.
+data = response_get.json()
+print("\nParsed JSON:")
+print(data)
+```
+
+1. `response_get.text`: provides the raw content of the server's response as a string
+2. `response_get.json()`: If the server's response is formatted in JSON, it can be converted into a Python dictionary.
 
 ### Slide 29: Check Response Headers
 
+This snippet shows how to access the response headers:
 
+```python
+# Headers provide meta-information about the response or request.
+print("\nResponse Headers:")
+print(response_get.headers)
+
+# Accessing a specific header value
+content_type = response_get.headers['Content-Type']
+print(f"Content Type: {content_type}")
+```
+
+1. `response_get.headers`: provides metadata about the response in the form of headers.
+2. `response_get.headers['Content-Type']`: Extracts the `Content-Type` header's value from the response headers.
 
 ### Slide 30: POST Request
 
+This snippet shows how to make a POST request using the `requests` library in Python.
 
+```python
+url = 'https://jsonplaceholder.typicode.com/posts'
+headers = {
+    'Content-type': 'application/json; charset=UTF-8'  # Header for sending JSON data
+}
+data = {
+    'title': 'foo',
+    'body': 'bar',
+    'userId': 1
+}
+
+response_post = requests.post(url, headers=headers, json=data)
+```
+
+1. `url =`: Specifies the web address the data will be sent to as a string value containing the base URL and the endpoint.
+2. `headers = {...}`: Defines a dictionary that contains information about the content type, telling the server that the content being sent is in JSON format.
+3. `data = {...}`: Represents the content being sent. It's a dictionary containing a title, body, and a userId.
+4. `response_post = requests.post(...): Sends a POST request to the URL, with the defined headers and data. The json=data argument converts the Python dictionary into a JSON string for the request. There are other methods to handle this conversion which we will see later!
 
 ### Slide 31: PUT Request
 
+This snippet shows how to handle a PUT request in python
 
+```python
+url = 'https://jsonplaceholder.typicode.com/posts/1'
+headers = {
+    'Content-type': 'application/json; charset=UTF-8'
+}
+data = {
+    'id': 1,
+    'title': 'Updated title',
+    'body': 'Updated body',
+    'userId': 1
+}
+```
 
 ### Slide 32: DELETE Request
 
+Lastly, this snippet shows how to create a DELETE request in Python.
 
-### Slide 30: Hands-On Agenda
-During the Hands-On Session we will be:
-1. Learning how to extract data from responses systematically
-2. Use the Procore API
+```python
+url = 'https://jsonplaceholder.typicode.com/posts/1'
+headers = {}  # Empty headers dictionary
 
-### Slide 31: Using Reponse Data in Postman
-Use the links below to find more information:
-* For RO: [Playbook](https://app.getguru.com/folders/izbexgGT/Postman-API-Testing?activeCard=15175606-2fee-4929-8d2c-8e6a699d3ecc)
-* For OthersL [GitHub](https://github.com/rogers-obrien-rad/api-alchemy/blob/main/documents/postman/8_using_response_data.md)
+response = requests.delete(url, headers=headers)
+```
 
-### Slide 32: Using Reponse Data in Postman
-Use the links below to find more information:
-* For RO: [Playbook](https://app.getguru.com/folders/Tqbx9ygc/Procore-API?activeCard=231f1661-2254-403b-b5af-cf29a4673a02)
+1. `headers = {}`: we still define a headers variable even though we don't need one. This just helps to maintain clarity and consistency, but we could have simply done the following and gotten the same result.
 
-### Slide 33: Using Reponse Data in Postman
-Use the links below to find more information:
-* For RO: [Playbook](https://app.getguru.com/folders/Tqbx9ygc/Procore-API?activeCard=952225df-921e-4fea-b22d-f283a37be009)
+```python
+url = 'https://jsonplaceholder.typicode.com/posts/1'
 
-### Slide 34: Using Reponse Data in Postman
-Use the links below to find more information:
-* For RO: [Playbook](https://app.getguru.com/folders/Tqbx9ygc/Procore-API?activeCard=335584a3-b7e4-4ab1-841b-8651ec8e5df5)
+response = requests.delete(url)
+```
 
-### Slide 35: Using Reponse Data in Postman
-Use the links below to find more information:
-* For RO: [Playbook](https://app.getguru.com/folders/Tqbx9ygc/Procore-API?activeCard=a0d189d5-1a15-4f5a-b360-abade464150e)
+2. `requests.delete(...)`: execute a DELETE request with the `delete()` method.
+
+<hr>
+</details> 
+
+## Break (10 minutes)
+
+## 👐 Hands-On: Procore API in Python
+<details><summary>Click to Expand</summary>
+<hr>
+
+### Slide 34: Procore API in Python
+During this part of the Hands-On Session we will be:
+1. Compare Postman requests to requests crafted in Python
+2. Craft Procore Requests Together
+3. Craft Your Own Requests!
+
+### Slide 35: POST Access Token in Procore
+This snippet shows you how to create and access token for your Procore App
+
+```python
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
+
+endpoint = "/oauth/token"
+
+headers = {"Content-Type": "application/json"}
+
+body = {
+    "grant_type": "client_credentials",
+    "client_id": client_id,
+    "client_secret": client_secret
+}
+
+response = requests.post(
+    url=f"{BASE_URL}{endpoint}",
+    headers=headers,
+    data=json.dumps(body)  # Convert the dictionary to a JSON string
+)
+
+access_token_data = response.json()
+access_token = access_token_data["access_token"]
+```
+
+1. `client_id = os.getenv("CLIENT_ID")`: Retrieves the value of the environment variable "CLIENT_ID" and assigns it to the client_id variable.
+2. `client_secret = os.getenv("CLIENT_SECRET")`: Retrieves the value of the environment variable "CLIENT_SECRET" and assigns it to the client_secret variable.
+3. `endpoint = "/oauth/token"`: Specifies the endpoint for obtaining an OAuth token.
+4. `headers = {...}`: Defines a dictionary that indicates the content being sent is in JSON format.
+5. `body = {...}`: Constructs the data payload, including the grant type and the client's ID and secret credentials.
+6. `response = requests.post(...)`: Sends a POST request to the composed URL (BASE_URL + endpoint), with the defined headers and the body converted to a JSON string.
+7. `access_token_data = response.json()`: Parses the response, which is expected to be in JSON format, into a Python dictionary.
+8 `access_token = access_token_data["access_token"]`: Extracts the value associated with the key "access_token" from the parsed response and assigns it to the access_token variable.
+
+### Slide 36: GET All Companies
+
+This snippet gets the companies that the app has been downloaded to.
+
+```python
+endpoint = "/rest/v1.0/companies"
+
+headers = {"Authorization": f"Bearer {access_token}"}
+
+response = requests.get(
+    url=f"{BASE_URL}{endpoint}",
+    headers=headers
+)
+
+company_data = response.json()
+
+# save first (0th) "id" from the list which will correspond to RO
+company_id = company_data[0]["id"]
+```
+
+1. `endpoint = "/rest/v1.0/companies"`: Specifies the endpoint for fetching company data.
+2. `headers = {...}: Defines a dictionary containing an Authorization header, which uses the previously retrieved access_token.
+3. `response = requests.get(...)`: Sends a GET request to the composed URL (BASE_URL + endpoint), with the defined headers.
+4. `company_data = response.json()`: Parses the response, which is expected to be in JSON format, into a Python dictionary or list (based on the response structure).
+5. `company_id = company_data[0]["id"]`: Extracts the "id" of the first (0th) company in the retrieved data list and assigns it to the company_id variable.
+
+### Slide 37: GET All Projects within a Company
+
+This snippet pulls all the projects that have granted access to your app.
+
+```python
+endpoint = "/rest/v1.1/projects"
+
+headers = {
+    "Authorization": f"Bearer {access_token}",
+    "Procore-Company-Id": f"{company_id}"
+}
+
+params = {
+    "company_id": f"{company_id}"
+}
+
+response = requests.get(
+    url=f"{BASE_URL}{endpoint}",
+    headers=headers,
+    params=params
+)
+
+project_data = response.json()
+```
+
+1. `endpoint = "/rest/v1.1/projects"`: Specifies the endpoint for fetching project data.
+2. `headers = {...}`: Defines a dictionary for headers, including the previously retrieved access_token for authentication and specifying which company's projects to fetch.
+3. `params = {"company_id": f"{company_id}"}`: Sets up query parameters to include the company_id in the request.
+4. `response = requests.get(...)`: Sends a GET request to the composed URL (BASE_URL + endpoint), using the headers and parameters defined.
+5. `project_data = response.json()`: Parses the response, expected to be in JSON format, into a Python dictionary or list (based on the response structure).
+
+### Slide 38: GET All Root Folders
+
+This snippet gets all the folders and their children at the root of the Project's Documents directory
+
+```python
+endpoint = "/rest/v1.0/folders"
+
+headers = {
+    "Authorization": f"Bearer {access_token}",
+    "Procore-Company-Id": f"{company_id}"
+}
+
+params = {
+    "project_id": "1668030" # hard-coded South Lamar project ID
+}
+
+response = requests.get(
+    url=f"{BASE_URL}{endpoint}",
+    headers=headers,
+    params=params
+)
+
+folders_data = response.json()
+```
+
+1. `endpoint = "/rest/v1.0/folders"`: Specifies the endpoint for fetching folder data.
+2. `headers = {...}`: Defines a dictionary for headers including the previously retrieved access_token for authentication and the company ID
+3. `params = {"project_id": "1668030"}`: Sets up query parameters with a hard-coded `project_id` to specify which project's folders to fetch.
+4. `esponse = requests.get(...)`: Sends a GET request to the composed URL (BASE_URL + endpoint), using the headers and parameters defined.
+5. `folders_data = response.json()`: Parses the response, expected to be in JSON format, into a Python dictionary or list (depending on the response structure).
+
+### Slide 39: GET All Submittals
+
+We will craft the Python request to get all submittals together.
+
+### Challenge: GET All RFIs (Slide 40)
+
+Use the structure from the submittals and the documentation to list all of the RFIs.
+* [General Documentation](https://developers.procore.com/reference/rest/v1/docs/rest-api-overview) 
 
 <hr>
 </details>
