@@ -70,14 +70,14 @@ headers = {
     "Procore-Company-Id": f"{company_id}"
 }
 
-params = {
+query_params = {
     "company_id": f"{company_id}"
 }
 
 response = requests.get(
     url=f"{BASE_URL}{endpoint}",
     headers=headers,
-    params=params
+    params=query_params
 )
 
 project_data = response.json()
@@ -100,14 +100,14 @@ headers = {
     "Procore-Company-Id": f"{company_id}"
 }
 
-params = {
+query_params = {
     "project_id": "291567" # hard-coded Sandbox project ID
 }
 
 response = requests.get(
     url=f"{BASE_URL}{endpoint}",
     headers=headers,
-    params=params
+    params=query_params
 )
 
 folders_data = response.json()
