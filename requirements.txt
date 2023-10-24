@@ -1,6 +1,2 @@
-python-dotenv
+requests
 pandas
-selenium
-bs4
-pyodbc
-firebase_admin
