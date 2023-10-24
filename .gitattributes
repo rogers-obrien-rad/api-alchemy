@@ -1,3 +1,0 @@
-# Fix top languages - notebooks mess with the numbers
-*.ipynb linguist-language=Python
-*.ipynb linguist-detectable
