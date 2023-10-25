@@ -10,11 +10,6 @@ _Overview: Continue using Python to make API calls and brainstorm ways to use yo
     * See who can use the `requests` library to make a GET request the fastest
     * See who can use the `requests` library to make a POST request the fastest
 
-3. Using Pandas DataFrames to Manipulate Data (15 minutes)
-    * Brief introduction to Pandas library for data manipulation
-    * Converting JSON data to Pandas DataFrames for analysis
-    * Using Pandas to save data in `.csv` or `.xlsx` formats
-
 4. Workshop: How can you use APIs? (50 minutes)
     * Identify pain points & opportunities
     * Research and discover relevant APIs
