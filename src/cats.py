@@ -12,6 +12,7 @@ def get_image():
     url = ""
 
     # Define the header(s)
+    # Use the following API Key: live_NMNC1lcbODoViW3HxtYkiIstzdDd8wN2e8tlHLM6QyDGSKTA1NUGGdqEGP7UOoBm
     headers = {}
 
     # Create the request using the correct method from the requests library
@@ -33,6 +34,7 @@ def favorite_image():
     url = ""
 
     # Define the header(s)
+    # Use the following API Key: live_NMNC1lcbODoViW3HxtYkiIstzdDd8wN2e8tlHLM6QyDGSKTA1NUGGdqEGP7UOoBm
     headers = {}
 
     # Define the data to send. You need to only use the `image_id` key and use the ID: h-bMdWYmd
