@@ -9,11 +9,11 @@ def get_image():
     """
 
     # Define the full URL
-    url = ""
+    get_url = ""
 
     # Define the header(s)
     # Use the following API Key: live_NMNC1lcbODoViW3HxtYkiIstzdDd8wN2e8tlHLM6QyDGSKTA1NUGGdqEGP7UOoBm
-    headers = {}
+    get_headers = {}
 
     # Create the request using the correct method from the requests library
     #response = 
@@ -31,20 +31,19 @@ def favorite_image():
     """
 
     # Define the full URL
-    url = ""
+    post_url = ""
 
     # Define the header(s)
     # Use the following API Key: live_NMNC1lcbODoViW3HxtYkiIstzdDd8wN2e8tlHLM6QyDGSKTA1NUGGdqEGP7UOoBm
-    headers = {}
+    post_headers = {}
 
     # Define the data to send. You need to only use the `image_id` key and use the ID: h-bMdWYmd
-    data = {}
+    post_data = {}
 
     # Create the request using the correct method from the requests library
     #response = 
 
-    # 
-    print("Challenge 1: Below is the URL to a random cat image")
+    print("Challenge 2: You should get a 'SUCCESS' message below")
     print(response.text)
 
 # -- DO NOT EDIT BELOW THIS LINE -- #
