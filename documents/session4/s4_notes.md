@@ -346,7 +346,59 @@ def favorite_image():
 <details><summary>Click to Expand</summary>
 <hr>
 
+### Slide 25: Software Use
 
+#### Discussion Prompt: What are the main software applications or tools you use daily?
+
+#### Tasks:
+* Jot down at least 3 software tools each person uses often in their daily workflow
+* Share your list with others to get inspired or help finish our their list
+
+#### Goal: Create a consolidated list of software tools crucial to their tasks and workflows.
+
+### Slide 26: Find Pain Points
+
+#### Discussion Prompt: What are some minor annoyances or inefficiencies you've noticed with these software tools?
+
+#### Tasks:
+* For each application, list 2 simple tasks you wish the tool could do
+* For each application, list 1 major task/workflow you would like
+
+#### Goal: Pinpoint areas where APIs could offer improvements or solutions.
+
+### Slide 27: Explore API Documentation
+
+#### Discussion Prompt: What can APIs do for you?
+
+#### Tasks:
+* For each application, find if they have an API. If so, find their documentation.
+* Skim through the documentation to see the different functionalities offered.
+* Identify at least 1 functionality that could solve some of your pain points.
+* Identify at least 1 functionality that could solve an issue you hadn't thought of!
+
+#### Goal: Familiarize with the kind of operations and tasks the API supports.
+
+### Slide 28: Brainstorm API Solutions
+
+#### Discussion Prompt: What process could you create to solve your issue?
+
+#### Tasks
+* Focus on one particular task you believe is important and that could be solved with the API.
+* Brainstorm the process or workflow and be specific!
+* If you have time, try another task or consult with others.
+
+#### Goal: Create an outline of how the API could solve an issues you currently face.
+
+### Slide 29: Open Discussion
+
+#### Discussion Prompt: How can others help refine your solution?
+
+#### Tasks
+* Discuss one solution you developed with another person
+* Focus on what might be missing
+* Are there any other considerations for the process?
+
+#### Goal: Strengthen your process.
 
 <hr>
 </details>
